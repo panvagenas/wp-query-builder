@@ -28,6 +28,11 @@
             "Pan\\": "src"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Pan\\Notices\\Tests\\": "tests"
+        }
+    },
     "archive": {
         "exclude": [
             "docs/*",

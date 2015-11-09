@@ -1,7 +1,8 @@
 /nbproject/private/
 /nbproject/### NetBeans template
 nbproject/private/
-build/
+build/*
+!build/build.php
 nbbuild/
 dist/
 nbdist/
