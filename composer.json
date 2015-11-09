@@ -30,8 +30,8 @@
     },
     "archive": {
         "exclude": [
-            "/docs",
-            "/tests"
+            "docs/*",
+            "tests/*"
         ]
     }
 
