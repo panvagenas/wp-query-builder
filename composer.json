@@ -30,7 +30,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Pan\\Notices\\Tests\\": "tests"
+            "Pan\\QueryBuilder\\Tests\\": "tests"
         }
     },
     "archive": {
