@@ -14,9 +14,26 @@ namespace Pan\QueryBuilder;
 
 use Pan\QueryBuilder\Constraints\ConstraintAbs;
 
+/**
+ * Class Builder
+ *
+ * @package Pan\QueryBuilder
+ * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
+ * @since   TODO ${VERSION}
+ */
 class Builder {
+	/**
+     * @var array
+     */
     protected $constraints = array();
 
+	/**
+     * @param ConstraintAbs $constraint
+     *
+     * @return $this|Builder
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
     public function addConstraint( ConstraintAbs $constraint ) {
         if ( $this->hasConstraint( $constraint->getName() ) ) {
             return $this->updateConstraint( $constraint );
@@ -26,12 +43,26 @@ class Builder {
         return $this;
     }
 
+	/**
+     * @param $name
+     *
+     * @return bool
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
     public function hasConstraint( $name ) {
         $name = (string) $name;
 
         return isset( $this->constraints[ $name ] );
     }
 
+	/**
+     * @param ConstraintAbs $newConstraint
+     *
+     * @return $this|Builder
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
     public function updateConstraint( ConstraintAbs $newConstraint ) {
         if ( $oldConstraint = $this->getConstraint( $newConstraint->getName() ) ) {
             return $oldConstraint->exchangeArray( $newConstraint->getArrayCopy() );
@@ -40,12 +71,26 @@ class Builder {
         return $this->addConstraint( $newConstraint );
     }
 
+	/**
+     * @param $name
+     *
+     * @return ConstraintAbs|null
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
     public function getConstraint( $name ) {
         $name = (string) $name;
 
         return $this->hasConstraint( $name ) ? $this->constraints[ $name ] : null;
     }
 
+	/**
+     * @param $name
+     *
+     * @return $this
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
     public function removeConstraint( $name ) {
         $name = (string) $name;
         unset( $this->constraints[ $name ] );
@@ -53,6 +98,11 @@ class Builder {
         return $this;
     }
 
+	/**
+     * @return array
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
     public function getQueryArgsArray() {
         $args = array();
 
