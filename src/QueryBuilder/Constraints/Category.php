@@ -24,35 +24,35 @@ class Category extends ConstraintAbs {
      *
      * @var int
      */
-    protected $cat;
+    protected $cat = 0;
 
     /**
      * use category slug
      *
      * @var string
      */
-    protected $category_name;
+    protected $category_name = '';
 
     /**
      * use category id
      *
      * @var array
      */
-    protected $category__and;
+    protected $category__and = array();
 
     /**
      * use category id
      *
      * @var array
      */
-    protected $category__in;
+    protected $category__in = array();
 
     /**
      * use category id
      *
      * @var array
      */
-    protected $category__not_in;
+    protected $category__not_in = array();
 
     /**
      * @return int

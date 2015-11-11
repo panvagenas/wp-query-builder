@@ -24,21 +24,21 @@ class Caching extends ConstraintAbs {
      *
      * @var boolean
      */
-    protected $cache_results;
+    protected $cache_results = true;
 
     /**
      * Post meta information cache
      *
      * @var boolean
      */
-    protected $update_post_meta_cache;
+    protected $update_post_meta_cache = true;
 
     /**
      * Post term information cache
      *
      * @var boolean
      */
-    protected $update_post_term_cache;
+    protected $update_post_term_cache = true;
 
     /**
      * @return boolean

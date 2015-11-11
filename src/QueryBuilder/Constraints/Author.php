@@ -24,28 +24,28 @@ class Author extends ConstraintAbs {
      *
      * @var int
      */
-    protected $author;
+    protected $author = 0;
 
     /**
      * use 'user_nicename' - NOT name
      *
      * @var string
      */
-    protected $author_name;
+    protected $author_name = '';
 
     /**
      * use author id (available since WP Version 3.7)
      *
      * @var array
      */
-    protected $author__in;
+    protected $author__in = array();
 
     /**
      * use author id (available since WP Version 3.7)
      *
      * @var array
      */
-    protected $author__not_in;
+    protected $author__not_in = array();
 
     /**
      * @return int
