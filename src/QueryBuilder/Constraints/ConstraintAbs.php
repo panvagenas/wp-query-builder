@@ -1,6 +1,6 @@
 <?php
 /**
- * Constraint.php description
+ * ConstraintAbs.php description
  *
  * @author    Panagiotis Vagenas <Panagiotis.Vagenas@interactivedata.com>
  * @date      2015-11-11
@@ -15,7 +15,7 @@ namespace Pan\QueryBuilder\Constraints;
 use Pan\QueryBuilder\ArrayObject;
 
 /**
- * Class Constraint
+ * Class ConstraintAbs
  *
  * @author    Panagiotis Vagenas <Panagiotis.Vagenas@interactivedata.com>
  * @date      2015-11-11
@@ -23,7 +23,8 @@ use Pan\QueryBuilder\ArrayObject;
  * @package   Pan\QueryBuilder\Constraints
  * @copyright Copyright (c) 2015 Interactive Data Managed Solutions Ltd.
  */
-abstract class Constraint extends ArrayObject
-{
-
+abstract class ConstraintAbs extends ArrayObject {
+    public function getName(){
+        return get_class($this);
+    }
 }

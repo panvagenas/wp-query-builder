@@ -18,7 +18,7 @@ namespace Pan\QueryBuilder\Constraints;
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @since   TODO ${VERSION}
  */
-class Category extends Constraint
+class Category extends ConstraintAbs
 {
     /**
      * use category id

@@ -18,7 +18,7 @@ namespace Pan\QueryBuilder\Constraints;
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @since   TODO ${VERSION}
  */
-class Pagination extends Constraint
+class Pagination extends ConstraintAbs
 {
 
 }
