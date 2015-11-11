@@ -18,8 +18,7 @@ namespace Pan\QueryBuilder\Constraints;
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @since   TODO ${VERSION}
  */
-class Author extends ConstraintAbs
-{
+class Author extends ConstraintAbs {
     /**
      * use author id
      *
@@ -53,8 +52,7 @@ class Author extends ConstraintAbs
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function getAuthor()
-    {
+    public function getAuthor() {
         return $this->author;
     }
 
@@ -64,9 +62,8 @@ class Author extends ConstraintAbs
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function setAuthor($author)
-    {
-        $this->author = (int)$author;
+    public function setAuthor( $author ) {
+        $this->author = (int) $author;
     }
 
     /**
@@ -74,8 +71,7 @@ class Author extends ConstraintAbs
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function getAuthorName()
-    {
+    public function getAuthorName() {
         return $this->author_name;
     }
 
@@ -85,9 +81,8 @@ class Author extends ConstraintAbs
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function setAuthorName($author_name)
-    {
-        $this->author_name = (string)$author_name;
+    public function setAuthorName( $author_name ) {
+        $this->author_name = (string) $author_name;
     }
 
     /**
@@ -95,8 +90,7 @@ class Author extends ConstraintAbs
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function getAuthorIn()
-    {
+    public function getAuthorIn() {
         return $this->author__in;
     }
 
@@ -106,9 +100,8 @@ class Author extends ConstraintAbs
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function setAuthorIn($author__in)
-    {
-        $this->author__in = (array)$author__in;
+    public function setAuthorIn( $author__in ) {
+        $this->author__in = (array) $author__in;
     }
 
     /**
@@ -116,8 +109,7 @@ class Author extends ConstraintAbs
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function getAuthorNotIn()
-    {
+    public function getAuthorNotIn() {
         return $this->author__not_in;
     }
 
@@ -127,8 +119,7 @@ class Author extends ConstraintAbs
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function setAuthorNotIn($author__not_in)
-    {
-        $this->author__not_in = (array)$author__not_in;
+    public function setAuthorNotIn( $author__not_in ) {
+        $this->author__not_in = (array) $author__not_in;
     }
 }

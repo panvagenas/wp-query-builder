@@ -18,8 +18,7 @@ namespace Pan\QueryBuilder\Constraints;
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @since   TODO ${VERSION}
  */
-class Category extends ConstraintAbs
-{
+class Category extends ConstraintAbs {
     /**
      * use category id
      *
@@ -60,8 +59,7 @@ class Category extends ConstraintAbs
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function getCat()
-    {
+    public function getCat() {
         return $this->cat;
     }
 
@@ -71,9 +69,8 @@ class Category extends ConstraintAbs
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function setCat($cat)
-    {
-        $this->cat = (int)$cat;
+    public function setCat( $cat ) {
+        $this->cat = (int) $cat;
     }
 
     /**
@@ -81,8 +78,7 @@ class Category extends ConstraintAbs
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function getCategoryName()
-    {
+    public function getCategoryName() {
         return $this->category_name;
     }
 
@@ -92,9 +88,8 @@ class Category extends ConstraintAbs
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function setCategoryName($category_name)
-    {
-        $this->category_name = (string)$category_name;
+    public function setCategoryName( $category_name ) {
+        $this->category_name = (string) $category_name;
     }
 
     /**
@@ -102,8 +97,7 @@ class Category extends ConstraintAbs
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function getCategoryAnd()
-    {
+    public function getCategoryAnd() {
         return $this->category__and;
     }
 
@@ -113,9 +107,8 @@ class Category extends ConstraintAbs
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function setCategoryAnd($category__and)
-    {
-        $this->category__and = (array)$category__and;
+    public function setCategoryAnd( $category__and ) {
+        $this->category__and = (array) $category__and;
     }
 
     /**
@@ -123,8 +116,7 @@ class Category extends ConstraintAbs
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function getCategoryIn()
-    {
+    public function getCategoryIn() {
         return $this->category__in;
     }
 
@@ -134,9 +126,8 @@ class Category extends ConstraintAbs
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function setCategoryIn($category__in)
-    {
-        $this->category__in = (array)$category__in;
+    public function setCategoryIn( $category__in ) {
+        $this->category__in = (array) $category__in;
     }
 
     /**
@@ -144,8 +135,7 @@ class Category extends ConstraintAbs
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function getCategoryNotIn()
-    {
+    public function getCategoryNotIn() {
         return $this->category__not_in;
     }
 
@@ -155,8 +145,7 @@ class Category extends ConstraintAbs
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function setCategoryNotIn($category__not_in)
-    {
-        $this->category__not_in = (array)$category__not_in;
+    public function setCategoryNotIn( $category__not_in ) {
+        $this->category__not_in = (array) $category__not_in;
     }
 }

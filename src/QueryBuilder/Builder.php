@@ -26,13 +26,6 @@ class Builder {
         return $this;
     }
 
-    public function removeConstraint( $name ) {
-        $name = (string) $name;
-        unset( $this->constraints[ $name ] );
-
-        return $this;
-    }
-
     public function hasConstraint( $name ) {
         $name = (string) $name;
 
@@ -51,6 +44,13 @@ class Builder {
         $name = (string) $name;
 
         return $this->hasConstraint( $name ) ? $this->constraints[ $name ] : null;
+    }
+
+    public function removeConstraint( $name ) {
+        $name = (string) $name;
+        unset( $this->constraints[ $name ] );
+
+        return $this;
     }
 
     public function getQueryArgsArray() {

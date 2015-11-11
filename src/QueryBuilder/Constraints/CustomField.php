@@ -19,7 +19,6 @@ namespace Pan\QueryBuilder\Constraints;
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @since   TODO ${VERSION}
  */
-class CustomField extends ConstraintAbs
-{
+class CustomField extends ConstraintAbs {
 
 }

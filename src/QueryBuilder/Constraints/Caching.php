@@ -18,8 +18,7 @@ namespace Pan\QueryBuilder\Constraints;
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @since   TODO ${VERSION}
  */
-class Caching extends ConstraintAbs
-{
+class Caching extends ConstraintAbs {
     /**
      * Post information cache
      *
@@ -46,8 +45,7 @@ class Caching extends ConstraintAbs
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function isCacheResults()
-    {
+    public function isCacheResults() {
         return $this->cache_results;
     }
 
@@ -57,9 +55,8 @@ class Caching extends ConstraintAbs
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function setCacheResults($cache_results)
-    {
-        $this->cache_results = (bool)$cache_results;
+    public function setCacheResults( $cache_results ) {
+        $this->cache_results = (bool) $cache_results;
     }
 
     /**
@@ -67,8 +64,7 @@ class Caching extends ConstraintAbs
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function isUpdatePostMetaCache()
-    {
+    public function isUpdatePostMetaCache() {
         return $this->update_post_meta_cache;
     }
 
@@ -78,9 +74,8 @@ class Caching extends ConstraintAbs
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function setUpdatePostMetaCache($update_post_meta_cache)
-    {
-        $this->update_post_meta_cache = (bool)$update_post_meta_cache;
+    public function setUpdatePostMetaCache( $update_post_meta_cache ) {
+        $this->update_post_meta_cache = (bool) $update_post_meta_cache;
     }
 
     /**
@@ -88,8 +83,7 @@ class Caching extends ConstraintAbs
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function isUpdatePostTermCache()
-    {
+    public function isUpdatePostTermCache() {
         return $this->update_post_term_cache;
     }
 
@@ -99,8 +93,7 @@ class Caching extends ConstraintAbs
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function setUpdatePostTermCache($update_post_term_cache)
-    {
-        $this->update_post_term_cache = (bool)$update_post_term_cache;
+    public function setUpdatePostTermCache( $update_post_term_cache ) {
+        $this->update_post_term_cache = (bool) $update_post_term_cache;
     }
 }

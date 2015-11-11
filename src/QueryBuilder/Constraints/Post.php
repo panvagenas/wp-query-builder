@@ -19,7 +19,6 @@ namespace Pan\QueryBuilder\Constraints;
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @since   TODO ${VERSION}
  */
-class Post extends ConstraintAbs
-{
+class Post extends ConstraintAbs {
 
 }

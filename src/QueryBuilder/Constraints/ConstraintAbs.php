@@ -24,7 +24,7 @@ use Pan\QueryBuilder\ArrayObject;
  * @copyright Copyright (c) 2015 Interactive Data Managed Solutions Ltd.
  */
 abstract class ConstraintAbs extends ArrayObject {
-    public function getName(){
-        return get_class($this);
+    public function getName() {
+        return get_class( $this );
     }
 }

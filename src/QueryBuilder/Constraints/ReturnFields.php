@@ -18,7 +18,6 @@ namespace Pan\QueryBuilder\Constraints;
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @since   TODO ${VERSION}
  */
-class ReturnFields extends ConstraintAbs
-{
+class ReturnFields extends ConstraintAbs {
 
 }
