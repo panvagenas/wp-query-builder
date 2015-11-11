@@ -3,10 +3,10 @@
 /**
  * build.php description
  *
- * @author    Panagiotis Vagenas <Panagiotis.Vagenas@interactivedata.com>
+ * @author    Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @date      2015-11-09
  * @version   $Id$
- * @copyright Copyright (c) 2015 Interactive Data Managed Solutions Ltd.
+ * @copyright Copyright (c) 2015 Panagiotis Vagenas
  */
 
 $projectRoot     = dirname( dirname( __FILE__ ) );
