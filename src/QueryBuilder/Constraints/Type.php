@@ -11,8 +11,6 @@
 
 namespace Pan\QueryBuilder\Constraints;
 
-use Pan\QueryBuilder\ArrayObject;
-
 /**
  * Show posts associated with certain type: {@link http://codex.wordpress.org/Post_Types}
  *
@@ -20,6 +18,7 @@ use Pan\QueryBuilder\ArrayObject;
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @since   TODO ${VERSION}
  */
-class Type extends ArrayObject{
+class Type extends Constraint
+{
 
 }

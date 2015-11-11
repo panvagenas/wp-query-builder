@@ -12,8 +12,6 @@
 namespace Pan\QueryBuilder\Constraints;
 
 
-use Pan\QueryBuilder\ArrayObject;
-
 /**
  * Show posts associated with a certain time and date period
  *
@@ -21,6 +19,7 @@ use Pan\QueryBuilder\ArrayObject;
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @since   TODO ${VERSION}
  */
-class Date extends ArrayObject{
+class Date extends Constraint
+{
 
 }

@@ -11,8 +11,6 @@
 
 namespace Pan\QueryBuilder\Constraints;
 
-use Pan\QueryBuilder\ArrayObject;
-
 /**
  * Sort retrieved posts
  *
@@ -20,6 +18,7 @@ use Pan\QueryBuilder\ArrayObject;
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @since   TODO ${VERSION}
  */
-class Order extends ArrayObject{
+class Order extends Constraint
+{
 
 }

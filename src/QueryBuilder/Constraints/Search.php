@@ -11,8 +11,6 @@
 
 namespace Pan\QueryBuilder\Constraints;
 
-use Pan\QueryBuilder\ArrayObject;
-
 /**
  * Show posts based on a keyword search
  *
@@ -20,6 +18,7 @@ use Pan\QueryBuilder\ArrayObject;
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @since   TODO ${VERSION}
  */
-class Search extends ArrayObject{
+class Search extends Constraint
+{
 
 }

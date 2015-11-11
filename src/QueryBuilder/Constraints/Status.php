@@ -11,8 +11,6 @@
 
 namespace Pan\QueryBuilder\Constraints;
 
-use Pan\QueryBuilder\ArrayObject;
-
 /**
  * Show posts associated with certain status:{@link http://codex.wordpress.org/Post_Status}
  *
@@ -20,6 +18,7 @@ use Pan\QueryBuilder\ArrayObject;
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @since   TODO ${VERSION}
  */
-class Status extends ArrayObject{
+class Status extends Constraint
+{
 
 }

@@ -11,8 +11,6 @@
 
 namespace Pan\QueryBuilder\Constraints;
 
-use Pan\QueryBuilder\ArrayObject;
-
 /**
  * Show posts associated with certain taxonomy: {@link http://codex.wordpress.org/Taxonomies}
  *
@@ -20,6 +18,7 @@ use Pan\QueryBuilder\ArrayObject;
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @since   TODO ${VERSION}
  */
-class Taxonomy extends ArrayObject{
+class Taxonomy extends Constraint
+{
 
 }

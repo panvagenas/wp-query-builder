@@ -11,8 +11,6 @@
 
 namespace Pan\QueryBuilder\Constraints;
 
-use Pan\QueryBuilder\ArrayObject;
-
 /**
  * Show posts associated with certain categories
  *
@@ -20,130 +18,145 @@ use Pan\QueryBuilder\ArrayObject;
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @since   TODO ${VERSION}
  */
-class Category extends ArrayObject {
-	/**
-	 * use category id
-	 *
-	 * @var int
-	 */
-	protected $cat;
-	/**
-	 * use category slug
-	 *
-	 * @var string
-	 */
-	protected $category_name;
-	/**
-	 * use category id
-	 *
-	 * @var array
-	 */
-	protected $category__and;
-	/**
-	 * use category id
-	 *
-	 * @var array
-	 */
-	protected $category__in;
-	/**
-	 * use category id
-	 *
-	 * @var array
-	 */
-	protected $category__not_in;
+class Category extends Constraint
+{
+    /**
+     * use category id
+     *
+     * @var int
+     */
+    protected $cat;
 
-	/**
-	 * @return int
-	 * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-	 * @since  TODO ${VERSION}
-	 */
-	public function getCat() {
-		return $this->cat;
-	}
+    /**
+     * use category slug
+     *
+     * @var string
+     */
+    protected $category_name;
 
-	/**
-	 * @param int $cat
-	 *
-	 * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-	 * @since  TODO ${VERSION}
-	 */
-	public function setCat( $cat ) {
-		$this->cat = (int) $cat;
-	}
+    /**
+     * use category id
+     *
+     * @var array
+     */
+    protected $category__and;
 
-	/**
-	 * @return string
-	 * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-	 * @since  TODO ${VERSION}
-	 */
-	public function getCategoryName() {
-		return $this->category_name;
-	}
+    /**
+     * use category id
+     *
+     * @var array
+     */
+    protected $category__in;
 
-	/**
-	 * @param string $category_name
-	 *
-	 * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-	 * @since  TODO ${VERSION}
-	 */
-	public function setCategoryName( $category_name ) {
-		$this->category_name = (string) $category_name;
-	}
+    /**
+     * use category id
+     *
+     * @var array
+     */
+    protected $category__not_in;
 
-	/**
-	 * @return array
-	 * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-	 * @since  TODO ${VERSION}
-	 */
-	public function getCategoryAnd() {
-		return $this->category__and;
-	}
+    /**
+     * @return int
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
+    public function getCat()
+    {
+        return $this->cat;
+    }
 
-	/**
-	 * @param array $category__and
-	 *
-	 * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-	 * @since  TODO ${VERSION}
-	 */
-	public function setCategoryAnd( $category__and ) {
-		$this->category__and = (array) $category__and;
-	}
+    /**
+     * @param int $cat
+     *
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
+    public function setCat($cat)
+    {
+        $this->cat = (int)$cat;
+    }
 
-	/**
-	 * @return array
-	 * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-	 * @since  TODO ${VERSION}
-	 */
-	public function getCategoryIn() {
-		return $this->category__in;
-	}
+    /**
+     * @return string
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
+    public function getCategoryName()
+    {
+        return $this->category_name;
+    }
 
-	/**
-	 * @param array $category__in
-	 *
-	 * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-	 * @since  TODO ${VERSION}
-	 */
-	public function setCategoryIn( $category__in ) {
-		$this->category__in = (array) $category__in;
-	}
+    /**
+     * @param string $category_name
+     *
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
+    public function setCategoryName($category_name)
+    {
+        $this->category_name = (string)$category_name;
+    }
 
-	/**
-	 * @return array
-	 * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-	 * @since  TODO ${VERSION}
-	 */
-	public function getCategoryNotIn() {
-		return $this->category__not_in;
-	}
+    /**
+     * @return array
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
+    public function getCategoryAnd()
+    {
+        return $this->category__and;
+    }
 
-	/**
-	 * @param array $category__not_in
-	 *
-	 * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-	 * @since  TODO ${VERSION}
-	 */
-	public function setCategoryNotIn( $category__not_in ) {
-		$this->category__not_in = (array) $category__not_in;
-	}
+    /**
+     * @param array $category__and
+     *
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
+    public function setCategoryAnd($category__and)
+    {
+        $this->category__and = (array)$category__and;
+    }
+
+    /**
+     * @return array
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
+    public function getCategoryIn()
+    {
+        return $this->category__in;
+    }
+
+    /**
+     * @param array $category__in
+     *
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
+    public function setCategoryIn($category__in)
+    {
+        $this->category__in = (array)$category__in;
+    }
+
+    /**
+     * @return array
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
+    public function getCategoryNotIn()
+    {
+        return $this->category__not_in;
+    }
+
+    /**
+     * @param array $category__not_in
+     *
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
+    public function setCategoryNotIn($category__not_in)
+    {
+        $this->category__not_in = (array)$category__not_in;
+    }
 }

@@ -19,6 +19,7 @@ namespace Pan\QueryBuilder\Constraints;
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @since   TODO ${VERSION}
  */
-class Password {
+class Password extends Constraint
+{
 
 }

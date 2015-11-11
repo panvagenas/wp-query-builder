@@ -11,8 +11,6 @@
 
 namespace Pan\QueryBuilder\Constraints;
 
-use Pan\QueryBuilder\ArrayObject;
-
 /**
  * Show posts associated with certain author
  *
@@ -20,105 +18,117 @@ use Pan\QueryBuilder\ArrayObject;
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @since   TODO ${VERSION}
  */
-class Author extends ArrayObject {
-	/**
-	 * use author id
-	 *
-	 * @var int
-	 */
-	protected $author;
-	/**
-	 * use 'user_nicename' - NOT name
-	 *
-	 * @var string
-	 */
-	protected $author_name;
-	/**
-	 * use author id (available since WP Version 3.7)
-	 *
-	 * @var array
-	 */
-	protected $author__in;
-	/**
-	 * use author id (available since WP Version 3.7)
-	 *
-	 * @var array
-	 */
-	protected $author__not_in;
+class Author extends Constraint
+{
+    /**
+     * use author id
+     *
+     * @var int
+     */
+    protected $author;
 
-	/**
-	 * @return int
-	 * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-	 * @since  TODO ${VERSION}
-	 */
-	public function getAuthor() {
-		return $this->author;
-	}
+    /**
+     * use 'user_nicename' - NOT name
+     *
+     * @var string
+     */
+    protected $author_name;
 
-	/**
-	 * @param int $author
-	 *
-	 * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-	 * @since  TODO ${VERSION}
-	 */
-	public function setAuthor( $author ) {
-		$this->author = (int) $author;
-	}
+    /**
+     * use author id (available since WP Version 3.7)
+     *
+     * @var array
+     */
+    protected $author__in;
 
-	/**
-	 * @return string
-	 * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-	 * @since  TODO ${VERSION}
-	 */
-	public function getAuthorName() {
-		return $this->author_name;
-	}
+    /**
+     * use author id (available since WP Version 3.7)
+     *
+     * @var array
+     */
+    protected $author__not_in;
 
-	/**
-	 * @param string $author_name
-	 *
-	 * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-	 * @since  TODO ${VERSION}
-	 */
-	public function setAuthorName( $author_name ) {
-		$this->author_name = (string) $author_name;
-	}
+    /**
+     * @return int
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
+    public function getAuthor()
+    {
+        return $this->author;
+    }
 
-	/**
-	 * @return array
-	 * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-	 * @since  TODO ${VERSION}
-	 */
-	public function getAuthorIn() {
-		return $this->author__in;
-	}
+    /**
+     * @param int $author
+     *
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
+    public function setAuthor($author)
+    {
+        $this->author = (int)$author;
+    }
 
-	/**
-	 * @param array $author__in
-	 *
-	 * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-	 * @since  TODO ${VERSION}
-	 */
-	public function setAuthorIn( $author__in ) {
-		$this->author__in = (array) $author__in;
-	}
+    /**
+     * @return string
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
+    public function getAuthorName()
+    {
+        return $this->author_name;
+    }
 
-	/**
-	 * @return array
-	 * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-	 * @since  TODO ${VERSION}
-	 */
-	public function getAuthorNotIn() {
-		return $this->author__not_in;
-	}
+    /**
+     * @param string $author_name
+     *
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
+    public function setAuthorName($author_name)
+    {
+        $this->author_name = (string)$author_name;
+    }
 
-	/**
-	 * @param array $author__not_in
-	 *
-	 * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-	 * @since  TODO ${VERSION}
-	 */
-	public function setAuthorNotIn( $author__not_in ) {
-		$this->author__not_in = (array) $author__not_in;
-	}
+    /**
+     * @return array
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
+    public function getAuthorIn()
+    {
+        return $this->author__in;
+    }
+
+    /**
+     * @param array $author__in
+     *
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
+    public function setAuthorIn($author__in)
+    {
+        $this->author__in = (array)$author__in;
+    }
+
+    /**
+     * @return array
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
+    public function getAuthorNotIn()
+    {
+        return $this->author__not_in;
+    }
+
+    /**
+     * @param array $author__not_in
+     *
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
+    public function setAuthorNotIn($author__not_in)
+    {
+        $this->author__not_in = (array)$author__not_in;
+    }
 }

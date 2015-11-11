@@ -11,8 +11,6 @@
 
 namespace Pan\QueryBuilder\Constraints;
 
-use Pan\QueryBuilder\ArrayObject;
-
 /**
  * Display content based on post and page parameters.
  * Remember that default `post_type` is only set to display posts but not pages
@@ -21,6 +19,7 @@ use Pan\QueryBuilder\ArrayObject;
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @since   TODO ${VERSION}
  */
-class Post extends ArrayObject{
+class Post extends Constraint
+{
 
 }
