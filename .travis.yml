@@ -14,7 +14,7 @@ php:
   - hhvm
 
 env:
-  - WP_VERSION=latest WP_MULTISITE=0 CODACY_PROJECT_TOKEN=
+  - WP_VERSION=latest WP_MULTISITE=0 CODACY_PROJECT_TOKEN=2dd67f8b930f43dcb31311a5189a9c64
 
 matrix:
   include:
