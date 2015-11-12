@@ -18,7 +18,7 @@ namespace Pan\QueryBuilder\Constraints;
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @since   TODO ${VERSION}
  */
-class Caching extends ConstraintAbs {
+class Caching extends AbsConstraint {
     /**
      * Post information cache
      *

@@ -19,6 +19,6 @@ namespace Pan\QueryBuilder\Constraints;
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @since   TODO ${VERSION}
  */
-class Date extends ConstraintAbs {
+class Date extends AbsConstraint {
 
 }

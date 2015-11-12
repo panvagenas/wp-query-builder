@@ -1,6 +1,6 @@
 <?php
 /**
- * ConstraintAbs.php description
+ * AbsConstraint.php description
  *
  * @author    Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @date      2015-11-11
@@ -12,23 +12,23 @@
 
 namespace Pan\QueryBuilder\Constraints;
 
-use Pan\QueryBuilder\ArrayObject;
+use Pan\QueryBuilder\AbsArrayObject;
 
 /**
- * Class ConstraintAbs
+ * Class AbsConstraint
  *
  * @package Pan\QueryBuilder\Constraints
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @since   TODO ${VERSION}
  */
-abstract class ConstraintAbs extends ArrayObject {
+abstract class AbsConstraint extends AbsArrayObject {
     /**
      * @var array
      */
     protected $_defaults = array();
 
     /**
-     * ConstraintAbs constructor.
+     * AbsConstraint constructor.
      *
      * @param array  $input
      * @param int    $flags

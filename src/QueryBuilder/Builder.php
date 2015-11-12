@@ -12,7 +12,7 @@
 namespace Pan\QueryBuilder;
 
 
-use Pan\QueryBuilder\Constraints\ConstraintAbs;
+use Pan\QueryBuilder\Constraints\AbsConstraint;
 
 /**
  * Class Builder
@@ -28,13 +28,13 @@ class Builder {
     protected $constraints = array();
 
 	/**
-     * @param ConstraintAbs $constraint
+     * @param AbsConstraint $constraint
      *
      * @return $this|Builder
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function addConstraint( ConstraintAbs $constraint ) {
+    public function addConstraint( AbsConstraint $constraint ) {
         if ( $this->hasConstraint( $constraint->getName() ) ) {
             return $this->updateConstraint( $constraint );
         }
@@ -57,13 +57,13 @@ class Builder {
     }
 
 	/**
-     * @param ConstraintAbs $newConstraint
+     * @param AbsConstraint $newConstraint
      *
      * @return $this|Builder
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function updateConstraint( ConstraintAbs $newConstraint ) {
+    public function updateConstraint( AbsConstraint $newConstraint ) {
         if ( $oldConstraint = $this->getConstraint( $newConstraint->getName() ) ) {
             return $oldConstraint->exchangeArray( $newConstraint->getArrayCopy() );
         }
@@ -74,7 +74,7 @@ class Builder {
 	/**
      * @param $name
      *
-     * @return ConstraintAbs|null
+     * @return AbsConstraint|null
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
@@ -107,7 +107,7 @@ class Builder {
         $args = array();
 
         foreach ( $this->constraints as $constraint ) {
-            /* @var ConstraintAbs $constraint */
+            /* @var AbsConstraint $constraint */
             $args = array_merge( $args, $constraint->getArrayCopy() );
         }
 

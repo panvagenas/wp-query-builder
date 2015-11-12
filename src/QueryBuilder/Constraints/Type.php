@@ -18,6 +18,6 @@ namespace Pan\QueryBuilder\Constraints;
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @since   TODO ${VERSION}
  */
-class Type extends ConstraintAbs {
+class Type extends AbsConstraint {
 
 }

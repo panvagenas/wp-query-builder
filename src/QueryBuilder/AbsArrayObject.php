@@ -1,7 +1,7 @@
 <?php
 /**
  * Project: wp-query-builder
- * File: ArrayObject.php
+ * File: AbsArrayObject.php
  * User: Panagiotis Vagenas <pan.vagenas@gmail.com>
  * Date: 10/11/2015
  * Time: 12:21 πμ
@@ -13,15 +13,15 @@ namespace Pan\QueryBuilder;
 
 
 /**
- * Class ArrayObject
+ * Class AbsArrayObject
  *
  * @package Pan\QueryBuilder
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @since   TODO ${VERSION}
  */
-class ArrayObject extends \ArrayObject {
+abstract class AbsArrayObject extends \ArrayObject {
 	/**
-	 * ArrayObject constructor.
+	 * AbsArrayObject constructor.
 	 *
 	 * @param array  $input
 	 * @param int    $flags
