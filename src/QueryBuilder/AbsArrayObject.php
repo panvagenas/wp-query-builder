@@ -35,6 +35,8 @@ abstract class AbsArrayObject extends \ArrayObject {
 	}
 
 	/**
+	 * {@inheritdoc}
+	 *
 	 * @param mixed $data
 	 *
 	 * @return array
