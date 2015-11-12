@@ -19,7 +19,7 @@ namespace Pan\QueryBuilder\Constraints;
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @since   TODO ${VERSION}
  */
-class CustomField extends AbsConstraint implements CompareConstantsIfc, RelationConstantsIfc, TypeConstantsIfc {
+class CustomField extends AbsConstraint implements IfcCompareConstants, IfcRelationConstants, IfcTypeConstants {
     /**
      * @var array
      */

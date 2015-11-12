@@ -1,7 +1,7 @@
 <?php
 /**
  * Project: wp-query-builder
- * File: RelationConstantsIfc.php
+ * File: IfcRelationConstants.php
  * User: Panagiotis Vagenas <pan.vagenas@gmail.com>
  * Date: 11/11/2015
  * Time: 9:26 μμ
@@ -13,11 +13,11 @@ namespace Pan\QueryBuilder\Constraints;
 
 
 /**
- * Interface RelationConstantsIfc
+ * Interface IfcRelationConstants
  *
  * @package Pan\QueryBuilder\Constraints
  */
-interface RelationConstantsIfc {
+interface IfcRelationConstants {
     /**
      *
      */
