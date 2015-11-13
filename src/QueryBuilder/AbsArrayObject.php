@@ -46,7 +46,7 @@ abstract class AbsArrayObject extends \ArrayObject {
 	public function exchangeArray( $data ) {
 		foreach ( $this->getArrayCopy() as $index => $item ) {
 			if ( isset( $data[ $index ] ) ) {
-				$this->{$index} = $data;
+				$this->{$index} = $data[$index];
 			}
 		}
 		return $this->getArrayCopy();
