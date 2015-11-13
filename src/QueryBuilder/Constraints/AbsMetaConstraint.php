@@ -32,8 +32,8 @@ class AbsMetaConstraint extends AbsConstraint {
      * @since  TODO ${VERSION}
      */
     public function getArrayCopy() {
-        if ( self::$_wrap && isset( $this->{self::$_wrap} ) ) {
-            return $this->{self::$_wrap};
+        if ( isset( $this->{static::$_wrap} ) && static::$_wrap ) {
+            return $this->{static::$_wrap};
         }
         throw new \Exception( 'Invalid implementation of ' . get_class( $this ) . ' class' );
     }
