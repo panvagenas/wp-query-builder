@@ -83,38 +83,58 @@ class CustomField extends AbsMetaConstraint implements IfcCompareConstants, IfcR
     protected $_relation = '';
 
     /**
-     * @param string       $key
-     * @param string|array $value
-     * @param string       $compare
-     * @param string       $type
+     * @param array $data
+     *
+     * @return array
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
+    public function exchangeArray( $data ) {
+        $this->meta_query = array();
+
+        foreach ( $data as $index => $item ) {
+            if ( $index === 'relation' ) {
+                $this->setRelation( $item );
+            }
+
+            if ( is_array( $index ) && isset( $index['key'] ) ) {
+                $key     = $item['key'];
+                $value   = isset( $item['value'] ) ?: '';
+                $compare = isset( $item['compare'] ) ?: '';
+                $type    = isset( $item['type'] ) ?: '';
+
+                if ( $this->validateAddValues( $key, $value, $compare, $type ) ) {
+                    $this->add( $key, $value, $compare, $type );
+                }
+                unset( $key, $value, $compare, $type );
+            }
+        }
+
+        return $this->meta_query;
+    }
+
+    /**
+     * @param $relation
+     *
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
+    public function setRelation( $relation ) {
+        if ( ! $this->isValidRelation( $relation ) ) {
+            throw new \InvalidArgumentException( 'Wrong meta query relation definition' );
+        }
+        $this->_relation = $relation;
+    }
+
+    /**
+     * @param $relation
      *
      * @return bool
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function add( $key, $value = '', $compare = '', $type = '' ) {
-        $value = (array) $value;
-
-        if ( ! $this->validateAddValues( $key, $value, $compare, $type ) ) {
-            return false;
-        }
-
-        $add = array(
-            'key' => $key
-        );
-        if ( ! empty( $value ) ) {
-            $add['value'] = $value;
-        }
-        if ( ! empty( $compare ) ) {
-            $add['compare'] = $compare;
-        }
-        if ( ! empty( $type ) ) {
-            $add['type'] = $type;
-        }
-
-        $this->meta_query[] = $add;
-
-        return true;
+    public function isValidRelation( $relation ) {
+        return in_array( $relation, static::$__relation__, true );
     }
 
     /**
@@ -154,58 +174,14 @@ class CustomField extends AbsMetaConstraint implements IfcCompareConstants, IfcR
     }
 
     /**
-     * @param $relation
-     *
-     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
-     */
-    public function setRelation( $relation ) {
-        if ( ! $this->isValidRelation( $relation ) ) {
-            throw new \InvalidArgumentException( 'Wrong meta query relation definition' );
-        }
-        $this->_relation = $relation;
-    }
-
-    /**
-     * @param array $data
-     *
-     * @return array
-     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
-     */
-    public function exchangeArray( $data ) {
-        $this->meta_query = array();
-
-        foreach ( $data as $index => $item ) {
-            if ( $index === 'relation' ) {
-                $this->setRelation( $item );
-            }
-
-            if ( is_array( $index ) && isset( $index['key'] ) ) {
-                $key     = $item['key'];
-                $value   = isset( $item['value'] ) ?: '';
-                $compare = isset( $item['compare'] ) ?: '';
-                $type    = isset( $item['type'] ) ?: '';
-
-                if ( $this->validateAddValues( $key, $value, $compare, $type ) ) {
-                    $this->add( $key, $value, $compare, $type );
-                }
-                unset($key, $value, $compare, $type);
-            }
-        }
-
-        return $this->meta_query;
-    }
-
-    /**
-     * @param $relation
+     * @param $compare
      *
      * @return bool
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function isValidRelation( $relation ) {
-        return in_array( $relation, static::$__relation__, true );
+    public function isValidCompare( $compare ) {
+        return in_array( $compare, static::$__compare__, true );
     }
 
     /**
@@ -220,13 +196,37 @@ class CustomField extends AbsMetaConstraint implements IfcCompareConstants, IfcR
     }
 
     /**
-     * @param $compare
+     * @param string       $key
+     * @param string|array $value
+     * @param string       $compare
+     * @param string       $type
      *
      * @return bool
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function isValidCompare( $compare ) {
-        return in_array( $compare, static::$__compare__, true );
+    public function add( $key, $value = '', $compare = '', $type = '' ) {
+        $value = (array) $value;
+
+        if ( ! $this->validateAddValues( $key, $value, $compare, $type ) ) {
+            return false;
+        }
+
+        $add = array(
+            'key' => $key
+        );
+        if ( ! empty( $value ) ) {
+            $add['value'] = $value;
+        }
+        if ( ! empty( $compare ) ) {
+            $add['compare'] = $compare;
+        }
+        if ( ! empty( $type ) ) {
+            $add['type'] = $type;
+        }
+
+        $this->meta_query[] = $add;
+
+        return true;
     }
 }
