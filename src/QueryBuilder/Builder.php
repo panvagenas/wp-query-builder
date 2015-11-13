@@ -44,14 +44,14 @@ class Builder {
     }
 
 	/**
-     * @param $name
+     * @param $constraint
      *
      * @return bool
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function hasConstraint( $name ) {
-        $name = (string) $name;
+    public function hasConstraint( $constraint ) {
+        $name = $constraint instanceof AbsConstraint ? $constraint->getName() : (string) $constraint;
 
         return isset( $this->constraints[ $name ] );
     }
@@ -72,27 +72,27 @@ class Builder {
     }
 
 	/**
-     * @param $name
+     * @param $constraint
      *
      * @return AbsConstraint|null
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function getConstraint( $name ) {
-        $name = (string) $name;
+    public function getConstraint( $constraint ) {
+        $name = $constraint instanceof AbsConstraint ? $constraint->getName() : (string) $constraint;
 
         return $this->hasConstraint( $name ) ? $this->constraints[ $name ] : null;
     }
 
 	/**
-     * @param $name
+     * @param $constraint
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function removeConstraint( $name ) {
-        $name = (string) $name;
+    public function removeConstraint( $constraint ) {
+        $name = $constraint instanceof AbsConstraint ? $constraint->getName() : (string) $constraint;
         unset( $this->constraints[ $name ] );
 
         return $this;

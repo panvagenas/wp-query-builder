@@ -9,9 +9,21 @@
     <php>
         <const name="WP_TESTS_MULTISITE" value="1"/>
     </php>
+
     <testsuites>
         <testsuite>
             <directory suffix="Test.php">../</directory>
         </testsuite>
     </testsuites>
+
+    <filter>
+        <whitelist>
+            <directory>../../</directory>
+            <exclude>
+                <directory>../../tests</directory>
+                <directory>../../vendor</directory>
+                <directory>../../build</directory>
+            </exclude>
+        </whitelist>
+    </filter>
 </phpunit>

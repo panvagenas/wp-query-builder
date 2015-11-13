@@ -37,7 +37,7 @@ abstract class AbsConstraint extends AbsArrayObject {
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function __construct( array $input, $flags, $iterator_class ) {
+    public function __construct( array $input = array(), $flags = 3, $iterator_class = "ArrayIterator" ) {
         parent::__construct( $input, $flags, $iterator_class );
         $this->setDefaults();
     }
@@ -46,12 +46,16 @@ abstract class AbsConstraint extends AbsArrayObject {
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    protected function setDefaults(){
-        foreach ( $this as $propName => $propValue ) {
-            if(strpos($propName, '_') === 0){
+    protected function setDefaults() {
+        if ( !empty( $this->_defaults ) ) {
+            return;
+        }
+
+        foreach ( get_object_vars( $this ) as $propName => $propValue ) {
+            if ( strpos( $propName, '_' ) === 0 ) {
                 continue;
             }
-            $this->_defaults[$propName] = $propValue;
+            $this->_defaults[ $propName ] = $propValue;
         }
     }
 
@@ -62,11 +66,13 @@ abstract class AbsConstraint extends AbsArrayObject {
      */
     public function getArrayCopy() {
         $out = array();
+
         foreach ( $this->_defaults as $propName => $defValue ) {
-            if($this[$propName] !== $defValue){
-                $out[$propName] = $this[$propName];
+            if ( isset( $this->{$propName} ) && $this->{$propName} !== $defValue ) {
+                $out[ $propName ] = $this->{$propName};
             }
         }
+
         return $out;
     }
 
@@ -77,5 +83,23 @@ abstract class AbsConstraint extends AbsArrayObject {
      */
     public function getName() {
         return get_class( $this );
+    }
+
+    public function getDefault( $propName ) {
+        if ( isset( $this->_defaults[ $propName ] ) ) {
+            return $this->_defaults[ $propName ];
+        }
+
+        return new \WP_Error(
+            'error',
+            'Property not found',
+            array( 'class' => $this->getName(), 'property' => $propName )
+        );
+    }
+
+    public function reset(){
+        foreach ( $this->_defaults as $index => $default ) {
+            $this->{$index} = $default;
+        }
     }
 }
