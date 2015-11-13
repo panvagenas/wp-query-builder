@@ -14,4 +14,15 @@
             <exclude>./Helpers</exclude>
         </testsuite>
     </testsuites>
+
+    <filter>
+        <whitelist>
+            <directory>../../</directory>
+            <exclude>
+                <directory>../../tests</directory>
+                <directory>../../vendor</directory>
+                <directory>../../build</directory>
+            </exclude>
+        </whitelist>
+    </filter>
 </phpunit>
