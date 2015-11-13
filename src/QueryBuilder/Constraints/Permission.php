@@ -12,12 +12,17 @@
 namespace Pan\QueryBuilder\Constraints;
 
 /**
- * Class Permission
+ * Display published and private posts, if the user has the appropriate capability
  *
  * @package Pan\QueryBuilder\Constraints
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @since   TODO ${VERSION}
  */
 class Permission extends AbsConstraint {
-
+    /**
+     * User permission
+     *
+     * @var string
+     */
+    protected $perm = 'readable';
 }
