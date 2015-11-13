@@ -9,20 +9,12 @@
  * Copyright: 2015 Panagiotis Vagenas
  */
 
-namespace Pan\QueryBuilder\Tests;
+namespace Pan\QueryBuilder\Tests\Constraints;
 
 use Pan\QueryBuilder\Builder;
 use Pan\QueryBuilder\Constraints\Author;
+use Pan\QueryBuilder\Tests\QueryBuilderUnitTestCase;
 
-/**
- * Class AuthorTest
- *
- * @author    Panagiotis Vagenas <Panagiotis.Vagenas@interactivedata.com>
- * @date      2015-11-13
- * @version   $Id$
- * @package   Pan
- * @copyright Copyright (c) 2015 Interactive Data Managed Solutions Ltd.
- */
 class AuthorTest extends QueryBuilderUnitTestCase {
     public function testAddingValues() {
         $authorID   = mt_rand( 0, PHP_INT_MAX );

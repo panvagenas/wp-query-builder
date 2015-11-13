@@ -1,14 +1,13 @@
 <?php
 /**
- * BuilderTest.php description
- *
- * @author    Panagiotis Vagenas <Panagiotis.Vagenas@interactivedata.com>
- * @date      2015-11-13
- * @version   $Id$
- * @package   Pan\QueryBuilder\Tests
- * @copyright Copyright (c) 2015 Interactive Data Managed Solutions Ltd.
+ * Project: wp-query-builder
+ * File: BuilderTest.php
+ * User: Panagiotis Vagenas <pan.vagenas@gmail.com>
+ * Date: 12/11/2015
+ * Time: 11:59 μμ
+ * Since: TODO ${VERSION}
+ * Copyright: 2015 Panagiotis Vagenas
  */
-
 
 namespace Pan\QueryBuilder\Tests;
 
@@ -16,16 +15,7 @@ use Pan\QueryBuilder\Builder;
 use Pan\QueryBuilder\Constraints\Author;
 use Pan\QueryBuilder\Constraints\Caching;
 
-/**
- * Class BuilderTest
- *
- * @author    Panagiotis Vagenas <Panagiotis.Vagenas@interactivedata.com>
- * @date      2015-11-13
- * @version   $Id$
- * @package   Pan\QueryBuilder\Tests
- * @copyright Copyright (c) 2015 Interactive Data Managed Solutions Ltd.
- */
-class BuilderTest extends \WP_UnitTestCase{
+class BuilderTest extends QueryBuilderUnitTestCase{
 
     public function testAddRemConstraints(){
         $constraintA = new Author();
