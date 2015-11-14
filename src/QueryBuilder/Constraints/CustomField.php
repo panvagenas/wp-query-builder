@@ -111,21 +111,6 @@ class CustomField extends AbsMetaConstraint implements IfcCompareConstants, IfcR
     }
 
     /**
-     * @return array
-     * @throws \Exception
-     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
-     */
-    public function getArrayCopy() {
-        $out = parent::getArrayCopy();
-        if ( count( $out ) > 1 && $this->_relation ) {
-            $out['relation'] = $this->_relation;
-        }
-
-        return $out;
-    }
-
-    /**
      * @param $relation
      *
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
@@ -147,6 +132,41 @@ class CustomField extends AbsMetaConstraint implements IfcCompareConstants, IfcR
      */
     public function isValidRelation( $relation ) {
         return in_array( $relation, static::$__relation__, true );
+    }
+
+    /**
+     * @param string       $key
+     * @param string|array $value
+     * @param string       $compare
+     * @param string       $type
+     *
+     * @return bool
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
+    public function add( $key, $value = '', $compare = '', $type = '' ) {
+        $value = (array) $value;
+
+        if ( ! $this->validateAddValues( $key, $value, $compare, $type ) ) {
+            return false;
+        }
+
+        $add = array(
+            'key' => $key
+        );
+        if ( ! empty( $value ) ) {
+            $add['value'] = $value;
+        }
+        if ( ! empty( $compare ) ) {
+            $add['compare'] = $compare;
+        }
+        if ( ! empty( $type ) ) {
+            $add['type'] = $type;
+        }
+
+        $this->meta_query[] = $add;
+
+        return true;
     }
 
     /**
@@ -208,37 +228,17 @@ class CustomField extends AbsMetaConstraint implements IfcCompareConstants, IfcR
     }
 
     /**
-     * @param string       $key
-     * @param string|array $value
-     * @param string       $compare
-     * @param string       $type
-     *
-     * @return bool
+     * @return array
+     * @throws \Exception
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function add( $key, $value = '', $compare = '', $type = '' ) {
-        $value = (array) $value;
-
-        if ( ! $this->validateAddValues( $key, $value, $compare, $type ) ) {
-            return false;
+    public function getArrayCopy() {
+        $out = parent::getArrayCopy();
+        if ( count( $out ) > 1 && $this->_relation ) {
+            $out['relation'] = $this->_relation;
         }
 
-        $add = array(
-            'key' => $key
-        );
-        if ( ! empty( $value ) ) {
-            $add['value'] = $value;
-        }
-        if ( ! empty( $compare ) ) {
-            $add['compare'] = $compare;
-        }
-        if ( ! empty( $type ) ) {
-            $add['type'] = $type;
-        }
-
-        $this->meta_query[] = $add;
-
-        return true;
+        return $out;
     }
 }

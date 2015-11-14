@@ -47,7 +47,7 @@ abstract class AbsConstraint extends AbsArrayObject {
      * @since  TODO ${VERSION}
      */
     protected function setDefaults() {
-        if ( !empty( $this->_defaults ) ) {
+        if ( ! empty( $this->_defaults ) ) {
             return;
         }
 
@@ -76,15 +76,6 @@ abstract class AbsConstraint extends AbsArrayObject {
         return $out;
     }
 
-    /**
-     * @return string
-     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
-     */
-    public function getName() {
-        return get_class( $this );
-    }
-
     public function getDefault( $propName ) {
         if ( isset( $this->_defaults[ $propName ] ) ) {
             return $this->_defaults[ $propName ];
@@ -97,7 +88,16 @@ abstract class AbsConstraint extends AbsArrayObject {
         );
     }
 
-    public function reset(){
+    /**
+     * @return string
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
+    public function getName() {
+        return get_class( $this );
+    }
+
+    public function reset() {
         foreach ( $this->_defaults as $index => $default ) {
             $this->{$index} = $default;
         }

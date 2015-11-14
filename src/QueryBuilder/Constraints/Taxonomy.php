@@ -20,24 +20,6 @@ namespace Pan\QueryBuilder\Constraints;
  */
 class Taxonomy extends AbsMetaConstraint implements IfcRelationConstants, IfcCompareConstants {
     /**
-     * use taxonomy parameters
-     *
-     * @var array
-     */
-    protected $tax_query = array();
-    /**
-     * @var string
-     */
-    protected static $_wrap = 'tax_query';
-    /**
-     * The logical relationship between each inner taxonomy array when there is more than one.
-     * Possible values are {@link IfcRelationConstants::RELATION_AND}, {@link IfcRelationConstants::RELATION_OR}.
-     * Do not use with a single inner taxonomy array
-     *
-     * @var string
-     */
-    protected $_relation = '';
-    /**
      * Term ID
      */
     const FIELD_TERM_ID = 'term_id';
@@ -50,6 +32,10 @@ class Taxonomy extends AbsMetaConstraint implements IfcRelationConstants, IfcCom
      */
     const FIELD_SLUG = 'slug';
     /**
+     * @var string
+     */
+    protected static $_wrap = 'tax_query';
+    /**
      * Valid values for $field
      *
      * @var array
@@ -61,6 +47,7 @@ class Taxonomy extends AbsMetaConstraint implements IfcRelationConstants, IfcCom
     );
     /**
      * Valid values for $operator
+     *
      * @var array
      */
     protected static $__operator__ = array(
@@ -79,7 +66,88 @@ class Taxonomy extends AbsMetaConstraint implements IfcRelationConstants, IfcCom
         self::RELATION_AND,
         self::RELATION_AND,
     );
+    /**
+     * use taxonomy parameters
+     *
+     * @var array
+     */
+    protected $tax_query = array();
+    /**
+     * The logical relationship between each inner taxonomy array when there is more than one.
+     * Possible values are {@link IfcRelationConstants::RELATION_AND}, {@link IfcRelationConstants::RELATION_OR}.
+     * Do not use with a single inner taxonomy array
+     *
+     * @var string
+     */
+    protected $_relation = '';
 
+    /**
+     * @return array
+     * @throws \Exception
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
+    public function getArrayCopy() {
+        $out = parent::getArrayCopy();
+        if ( count( $out ) > 1 && $this->_relation ) {
+            $out['relation'] = $this->_relation;
+        }
+
+        return $out;
+    }
+
+    /**
+     * @param array $data
+     *
+     * @return array
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
+    public function exchangeArray( $data ) {
+        $this->tax_query = array();
+
+        foreach ( $data as $index => $item ) {
+            if ( $index === 'relation' ) {
+                $this->setRelation( $item );
+            }
+
+            if ( is_array( $index ) && isset( $index['taxonomy'] ) && isset( $index['terms'] ) ) {
+                $taxonomy         = $item['taxonomy'];
+                $terms            = $item['terms'];
+                $field            = isset( $item['field'] ) ? $item['field'] : self::FIELD_TERM_ID;
+                $include_children = isset( $item['include_children'] ) ? $item['include_children'] : true;
+                $operator         = isset( $item['operator'] ) ? $item['operator'] : self::IN;
+
+                $this->add( $taxonomy, $terms, $field, $include_children, $operator );
+            }
+        }
+
+        return $this->tax_query;
+    }
+
+    /**
+     * @param $relation
+     *
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
+    public function setRelation( $relation ) {
+        if ( ! $this->isValidRelation( $relation ) ) {
+            throw new \InvalidArgumentException( 'Wrong meta query relation definition' );
+        }
+        $this->_relation = $relation;
+    }
+
+    /**
+     * @param $relation
+     *
+     * @return bool
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
+    public function isValidRelation( $relation ) {
+        return in_array( $relation, static::$__relation__, true );
+    }
 
     /**
      * @param string           $taxonomy         Taxonomy
@@ -133,45 +201,6 @@ class Taxonomy extends AbsMetaConstraint implements IfcRelationConstants, IfcCom
     }
 
     /**
-     * @return array
-     * @throws \Exception
-     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
-     */
-    public function getArrayCopy() {
-        $out = parent::getArrayCopy();
-        if ( count( $out ) > 1 && $this->_relation ) {
-            $out['relation'] = $this->_relation;
-        }
-
-        return $out;
-    }
-
-    /**
-     * @param $relation
-     *
-     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
-     */
-    public function setRelation( $relation ) {
-        if ( ! $this->isValidRelation( $relation ) ) {
-            throw new \InvalidArgumentException( 'Wrong meta query relation definition' );
-        }
-        $this->_relation = $relation;
-    }
-
-    /**
-     * @param $relation
-     *
-     * @return bool
-     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
-     */
-    public function isValidRelation( $relation ) {
-        return in_array( $relation, static::$__relation__, true );
-    }
-
-    /**
      * @see    {@link Taxonomy::exchangeArray()}
      *
      * @param        $taxonomy
@@ -209,34 +238,5 @@ class Taxonomy extends AbsMetaConstraint implements IfcRelationConstants, IfcCom
         }
 
         return true;
-    }
-
-    /**
-     * @param array $data
-     *
-     * @return array
-     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
-     */
-    public function exchangeArray( $data ) {
-        $this->tax_query = array();
-
-        foreach ( $data as $index => $item ) {
-            if ( $index === 'relation' ) {
-                $this->setRelation( $item );
-            }
-
-            if ( is_array( $index ) && isset( $index['taxonomy'] ) && isset( $index['terms'] ) ) {
-                $taxonomy         = $item['taxonomy'];
-                $terms            = $item['terms'];
-                $field            = isset( $item['field'] ) ? $item['field'] : self::FIELD_TERM_ID;
-                $include_children = isset( $item['include_children'] ) ? $item['include_children'] : true;
-                $operator         = isset( $item['operator'] ) ? $item['operator'] : self::IN;
-
-                $this->add( $taxonomy, $terms, $field, $include_children, $operator );
-            }
-        }
-
-        return $this->tax_query;
     }
 }

@@ -22,12 +22,12 @@ use Pan\QueryBuilder\Constraints\AbsConstraint;
  * @since   TODO ${VERSION}
  */
 class Builder {
-	/**
+    /**
      * @var array
      */
     protected $constraints = array();
 
-	/**
+    /**
      * @param AbsConstraint $constraint
      *
      * @return $this|Builder
@@ -43,7 +43,7 @@ class Builder {
         return $this;
     }
 
-	/**
+    /**
      * @param $constraint
      *
      * @return bool
@@ -56,7 +56,7 @@ class Builder {
         return isset( $this->constraints[ $name ] );
     }
 
-	/**
+    /**
      * @param AbsConstraint $newConstraint
      *
      * @return $this|Builder
@@ -71,7 +71,7 @@ class Builder {
         return $this->addConstraint( $newConstraint );
     }
 
-	/**
+    /**
      * @param $constraint
      *
      * @return AbsConstraint|null
@@ -84,7 +84,7 @@ class Builder {
         return $this->hasConstraint( $name ) ? $this->constraints[ $name ] : null;
     }
 
-	/**
+    /**
      * @param $constraint
      *
      * @return $this
@@ -98,7 +98,7 @@ class Builder {
         return $this;
     }
 
-	/**
+    /**
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}

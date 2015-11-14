@@ -19,7 +19,7 @@ namespace Pan\QueryBuilder\Constraints;
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @since   TODO ${VERSION}
  */
-abstract class AbsPostPage extends AbsConstraint{
+abstract class AbsPostPage extends AbsConstraint {
     /**
      * Return only top level entries
      */
@@ -30,7 +30,7 @@ abstract class AbsPostPage extends AbsConstraint{
      *
      * @var int
      */
-    protected $post_parent = -1;
+    protected $post_parent = - 1;
     /**
      * use post ids. Specify posts whose parent is in an array. (available since Version 3.6)
      *
@@ -82,7 +82,7 @@ abstract class AbsPostPage extends AbsConstraint{
      * @since  TODO ${VERSION}
      */
     public function setPostParent( $post_parent ) {
-        $this->post_parent = (int)$post_parent;
+        $this->post_parent = (int) $post_parent;
 
         return $this;
     }
@@ -104,7 +104,7 @@ abstract class AbsPostPage extends AbsConstraint{
      * @since  TODO ${VERSION}
      */
     public function setPostParentIn( $post_parent__in ) {
-        $this->post_parent__in = (array)$post_parent__in;
+        $this->post_parent__in = (array) $post_parent__in;
 
         return $this;
     }
@@ -126,7 +126,7 @@ abstract class AbsPostPage extends AbsConstraint{
      * @since  TODO ${VERSION}
      */
     public function setPostParentNotIn( $post_parent__not_in ) {
-        $this->post_parent__not_in = (array)$post_parent__not_in;
+        $this->post_parent__not_in = (array) $post_parent__not_in;
 
         return $this;
     }
@@ -148,7 +148,7 @@ abstract class AbsPostPage extends AbsConstraint{
      * @since  TODO ${VERSION}
      */
     public function setPostIn( $post__in ) {
-        $this->post__in = (array)$post__in;
+        $this->post__in = (array) $post__in;
 
         return $this;
     }
@@ -170,7 +170,7 @@ abstract class AbsPostPage extends AbsConstraint{
      * @since  TODO ${VERSION}
      */
     public function setPostNotIn( $post__not_in ) {
-        $this->post__not_in = (array)$post__not_in;
+        $this->post__not_in = (array) $post__not_in;
 
         return $this;
     }
@@ -192,7 +192,7 @@ abstract class AbsPostPage extends AbsConstraint{
      * @since  TODO ${VERSION}
      */
     public function setPostNameIn( $post_name__in ) {
-        $this->post_name__in = (array)$post_name__in;
+        $this->post_name__in = (array) $post_name__in;
 
         return $this;
     }

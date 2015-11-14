@@ -49,7 +49,7 @@ class Page extends Post {
      * @since  TODO ${VERSION}
      */
     public function setPageId( $page_id ) {
-        $this->page_id = (int)$page_id;
+        $this->page_id = (int) $page_id;
 
         return $this;
     }
@@ -71,7 +71,7 @@ class Page extends Post {
      * @since  TODO ${VERSION}
      */
     public function setPagename( $pagename ) {
-        $this->pagename = (string)$pagename;
+        $this->pagename = (string) $pagename;
 
         return $this;
     }

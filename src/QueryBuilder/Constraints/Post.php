@@ -50,7 +50,7 @@ class Post extends AbsConstraint {
      * @since  TODO ${VERSION}
      */
     public function setP( $p ) {
-        $this->p = (int)$p;
+        $this->p = (int) $p;
 
         return $this;
     }
@@ -72,7 +72,7 @@ class Post extends AbsConstraint {
      * @since  TODO ${VERSION}
      */
     public function setName( $name ) {
-        $this->name = (string)$name;
+        $this->name = (string) $name;
 
         return $this;
     }

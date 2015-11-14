@@ -100,7 +100,7 @@ class Pagination extends AbsConstraint {
      * @since  TODO ${VERSION}
      */
     public function setNopaging( $nopaging ) {
-        $this->nopaging = (bool)$nopaging;
+        $this->nopaging = (bool) $nopaging;
 
         return $this;
     }
@@ -122,7 +122,7 @@ class Pagination extends AbsConstraint {
      * @since  TODO ${VERSION}
      */
     public function setPostsPerPage( $posts_per_page ) {
-        $this->posts_per_page = (int)$posts_per_page;
+        $this->posts_per_page = (int) $posts_per_page;
 
         return $this;
     }
@@ -144,7 +144,7 @@ class Pagination extends AbsConstraint {
      * @since  TODO ${VERSION}
      */
     public function setPostsPerArchivePage( $posts_per_archive_page ) {
-        $this->posts_per_archive_page = (int)$posts_per_archive_page;
+        $this->posts_per_archive_page = (int) $posts_per_archive_page;
 
         return $this;
     }
@@ -166,7 +166,7 @@ class Pagination extends AbsConstraint {
      * @since  TODO ${VERSION}
      */
     public function setOffset( $offset ) {
-        $this->offset = (int)$offset;
+        $this->offset = (int) $offset;
 
         return $this;
     }
@@ -188,7 +188,7 @@ class Pagination extends AbsConstraint {
      * @since  TODO ${VERSION}
      */
     public function setPaged( $paged ) {
-        $this->paged = (int)$paged;
+        $this->paged = (int) $paged;
 
         return $this;
     }
@@ -210,7 +210,7 @@ class Pagination extends AbsConstraint {
      * @since  TODO ${VERSION}
      */
     public function setPage( $page ) {
-        $this->page = (int)$page;
+        $this->page = (int) $page;
 
         return $this;
     }
@@ -232,7 +232,7 @@ class Pagination extends AbsConstraint {
      * @since  TODO ${VERSION}
      */
     public function setIgnoreStickyPosts( $ignore_sticky_posts ) {
-        $this->ignore_sticky_posts = (bool)$ignore_sticky_posts;
+        $this->ignore_sticky_posts = (bool) $ignore_sticky_posts;
 
         return $this;
     }

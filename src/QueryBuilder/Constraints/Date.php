@@ -22,6 +22,25 @@ namespace Pan\QueryBuilder\Constraints;
 class Date extends AbsConstraint implements IfcRelationConstants, IfcCompareConstants {
     protected static $_wrap = 'date_query';
     /**
+     * @var array
+     */
+    protected static $__compare__ = array(
+        self::EQUAL,
+        self::NOT_EQUAL,
+        self::GREATER_THAN,
+        self::GREATER_THAN_OR_EQUAL,
+        self::LESSER_THAN,
+        self::LESSER_THAN_OR_EQUAL,
+        self::LIKE,
+        self::NOT_LIKE,
+        self::IN,
+        self::NOT_IN,
+        self::BETWEEN,
+        self::NOT_BETWEEN,
+        self::EXISTS,
+        self::NOT_EXISTS,
+    );
+    /**
      * 4 digit year (e.g. 2011)
      *
      * @var int
@@ -108,25 +127,6 @@ class Date extends AbsConstraint implements IfcRelationConstants, IfcCompareCons
      * @var string
      */
     protected $relation = self::RELATION_AND;
-    /**
-     * @var array
-     */
-    protected static $__compare__ = array(
-        self::EQUAL,
-        self::NOT_EQUAL,
-        self::GREATER_THAN,
-        self::GREATER_THAN_OR_EQUAL,
-        self::LESSER_THAN,
-        self::LESSER_THAN_OR_EQUAL,
-        self::LIKE,
-        self::NOT_LIKE,
-        self::IN,
-        self::NOT_IN,
-        self::BETWEEN,
-        self::NOT_BETWEEN,
-        self::EXISTS,
-        self::NOT_EXISTS,
-    );
 
     /**
      * @return int
@@ -152,6 +152,28 @@ class Date extends AbsConstraint implements IfcRelationConstants, IfcCompareCons
         }
 
         return $this;
+    }
+
+    /**
+     * @param int|float $start
+     * @param int|float $end
+     * @param int|float $subject
+     * @param bool      $inclusive
+     *
+     * @return bool
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
+    protected function validateIntBetween( $start, $end, $subject, $inclusive = true ) {
+        if ( is_numeric( $subject ) ) {
+            if ( $inclusive ) {
+                return $subject >= $start && $subject <= $end;
+            }
+
+            return $subject > $start && $subject < $end;
+        }
+
+        return false;
     }
 
     /**
@@ -483,33 +505,11 @@ class Date extends AbsConstraint implements IfcRelationConstants, IfcCompareCons
     }
 
     /**
-     * @param int|float $start
-     * @param int|float $end
-     * @param int|float $subject
-     * @param bool      $inclusive
-     *
-     * @return bool
-     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
-     */
-    protected function validateIntBetween( $start, $end, $subject, $inclusive = true ) {
-        if ( is_numeric( $subject ) ) {
-            if ( $inclusive ) {
-                return $subject >= $start && $subject <= $end;
-            }
-
-            return $subject > $start && $subject < $end;
-        }
-
-        return false;
-    }
-
-    /**
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
     public function getArrayCopy() {
-        return array(self::$_wrap => parent::getArrayCopy());
+        return array( self::$_wrap => parent::getArrayCopy() );
     }
 }
