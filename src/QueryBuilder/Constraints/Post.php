@@ -11,7 +11,7 @@
 
 namespace Pan\QueryBuilder\Constraints;
 
-use Pan\QueryBuilder\Constraints\Abs\Constraint;
+use Pan\QueryBuilder\Constraints\Abs\PostPage;
 
 /**
  * Display content based on post and page parameters.
@@ -21,7 +21,7 @@ use Pan\QueryBuilder\Constraints\Abs\Constraint;
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @since   TODO ${VERSION}
  */
-class Post extends Constraint {
+class Post extends PostPage {
     /**
      * use post id.
      *
