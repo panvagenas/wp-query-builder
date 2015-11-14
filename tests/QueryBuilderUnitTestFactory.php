@@ -18,7 +18,7 @@ class QueryBuilderUnitTestFactory extends \WP_UnitTest_Factory {
     /**
      * @var QueryBuilderCustomPostType
      */
-    protected $custom_post;
+    public $custom_post;
 
     public function __construct() {
         parent::__construct();

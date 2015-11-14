@@ -45,7 +45,7 @@ class Query {
      * @since  TODO ${VERSION}
      */
     public function sort( array $postIds ) {
-        if ( ! $this->lastResult ) {
+        if ( ! $this->lastResult || !$this->lastResult->posts ) {
             trigger_error( 'No lastResult found in ' . __CLASS__ );
 
             return new \WP_Error( 'warning', 'No lastResult found in ' . __CLASS__ );
