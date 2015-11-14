@@ -14,15 +14,15 @@ namespace Pan\QueryBuilder\Tests;
 
 use Pan\QueryBuilder\Tests\Helpers\QueryBuilderCustomPostType;
 
-class QueryBuilderUnitTestFactory extends \WP_UnitTest_Factory{
-	/**
-	 * @var QueryBuilderCustomPostType
-	 */
-	protected $custom_post;
+class QueryBuilderUnitTestFactory extends \WP_UnitTest_Factory {
+    /**
+     * @var QueryBuilderCustomPostType
+     */
+    protected $custom_post;
 
-	public function __construct() {
-		parent::__construct();
-		$this->custom_post = new QueryBuilderCustomPostType($this);
-	}
+    public function __construct() {
+        parent::__construct();
+        $this->custom_post = new QueryBuilderCustomPostType( $this );
+    }
 
 }

@@ -12,18 +12,19 @@
 namespace Pan\QueryBuilder\Tests;
 
 
-class QueryBuilderUnitTestCase extends \WP_UnitTestCase{
-	/**
-	 * @return QueryBuilderUnitTestFactory
-	 * @static
-	 * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-	 * @since  TODO ${VERSION}
-	 */
-	protected static function factory() {
-		static $factory = null;
-		if ( ! $factory ) {
-			$factory = new QueryBuilderUnitTestFactory();
-		}
-		return $factory;
-	}
+class QueryBuilderUnitTestCase extends \WP_UnitTestCase {
+    /**
+     * @return QueryBuilderUnitTestFactory
+     * @static
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
+    protected static function factory() {
+        static $factory = null;
+        if ( ! $factory ) {
+            $factory = new QueryBuilderUnitTestFactory();
+        }
+
+        return $factory;
+    }
 }

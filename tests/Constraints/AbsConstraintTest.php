@@ -15,14 +15,14 @@ use Pan\QueryBuilder\Constraints\Category;
 use Pan\QueryBuilder\Tests\QueryBuilderUnitTestCase;
 
 class AbsConstraintTest extends QueryBuilderUnitTestCase {
-    public function testGetDefault(){
+    public function testGetDefault() {
         $constraintCat = new Category();
 
-        $this->assertEquals(0, $constraintCat->getDefault('cat'));
+        $this->assertEquals( 0, $constraintCat->getDefault( 'cat' ) );
 
-        $constraintCat->setCat(1);
+        $constraintCat->setCat( 1 );
 
-        $this->assertEquals(0, $constraintCat->getDefault('cat'));
-        $this->assertInstanceOf('\WP_Error', $constraintCat->getDefault('missing'));
+        $this->assertEquals( 0, $constraintCat->getDefault( 'cat' ) );
+        $this->assertInstanceOf( '\WP_Error', $constraintCat->getDefault( 'missing' ) );
     }
 }

@@ -15,21 +15,21 @@ namespace Pan\QueryBuilder\Tests\Constraints;
 use Pan\QueryBuilder\Constraints\Caching;
 use Pan\QueryBuilder\Tests\QueryBuilderUnitTestCase;
 
-class CachingTest extends QueryBuilderUnitTestCase{
-    public function testGettersSetters(){
+class CachingTest extends QueryBuilderUnitTestCase {
+    public function testGettersSetters() {
         $constraint = new Caching();
 
-        $this->assertEmpty($constraint->getArrayCopy());
-        $this->assertTrue($constraint->isCacheResults());
-        $this->assertTrue($constraint->isUpdatePostMetaCache());
-        $this->assertTrue($constraint->isUpdatePostTermCache());
+        $this->assertEmpty( $constraint->getArrayCopy() );
+        $this->assertTrue( $constraint->isCacheResults() );
+        $this->assertTrue( $constraint->isUpdatePostMetaCache() );
+        $this->assertTrue( $constraint->isUpdatePostTermCache() );
 
-        $constraint->setCacheResults(false);
-        $constraint->setUpdatePostMetaCache(false);
-        $constraint->setUpdatePostTermCache(false);
+        $constraint->setCacheResults( false );
+        $constraint->setUpdatePostMetaCache( false );
+        $constraint->setUpdatePostTermCache( false );
 
-        $this->assertFalse($constraint->isCacheResults());
-        $this->assertFalse($constraint->isUpdatePostMetaCache());
-        $this->assertFalse($constraint->isUpdatePostTermCache());
+        $this->assertFalse( $constraint->isCacheResults() );
+        $this->assertFalse( $constraint->isUpdatePostMetaCache() );
+        $this->assertFalse( $constraint->isUpdatePostTermCache() );
     }
 }

@@ -12,10 +12,10 @@
 namespace Pan\QueryBuilder\Tests\Helpers;
 
 
-class QueryBuilderCustomPostType extends \WP_UnitTest_Factory_For_Post{
-	public function __construct( $factory ) {
-		parent::__construct( $factory );
-		$this->default_generation_definitions['post_type'] = 'custom_post_type';
-	}
+class QueryBuilderCustomPostType extends \WP_UnitTest_Factory_For_Post {
+    public function __construct( $factory ) {
+        parent::__construct( $factory );
+        $this->default_generation_definitions['post_type'] = 'custom_post_type';
+    }
 
 }

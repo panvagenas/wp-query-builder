@@ -14,19 +14,19 @@ namespace Pan\QueryBuilder\Tests\Constraints;
 use Pan\QueryBuilder\Constraints\CustomField;
 use Pan\QueryBuilder\Tests\QueryBuilderUnitTestCase;
 
-class CustomFieldTest extends QueryBuilderUnitTestCase{
-    public function testAddNew(){
+class CustomFieldTest extends QueryBuilderUnitTestCase {
+    public function testAddNew() {
         $customField = new CustomField();
 
-        $this->assertEmpty($customField->getArrayCopy());
+        $this->assertEmpty( $customField->getArrayCopy() );
 
-        $customField->setRelation(CustomField::RELATION_AND);
+        $customField->setRelation( CustomField::RELATION_AND );
 
-        $this->assertEmpty($customField->getArrayCopy());
+        $this->assertEmpty( $customField->getArrayCopy() );
 
-        $customField->add('key', 'value');
+        $customField->add( 'key', 'value' );
 
-        $this->assertNotEmpty($customField->getArrayCopy());
-        $this->assertNotContains('relation', $customField->getArrayCopy());
+        $this->assertNotEmpty( $customField->getArrayCopy() );
+        $this->assertNotContains( 'relation', $customField->getArrayCopy() );
     }
 }

@@ -15,33 +15,33 @@ namespace Pan\QueryBuilder\Tests\Constraints;
 use Pan\QueryBuilder\Constraints\Category;
 use Pan\QueryBuilder\Tests\QueryBuilderUnitTestCase;
 
-class CategoryTest extends QueryBuilderUnitTestCase{
-    public function testGettersSetters(){
+class CategoryTest extends QueryBuilderUnitTestCase {
+    public function testGettersSetters() {
         $constraint = new Category();
 
-        $this->assertEmpty($constraint->getArrayCopy());
+        $this->assertEmpty( $constraint->getArrayCopy() );
 
-        $this->assertEquals(0, $constraint->getCat());
-        $this->assertEquals('', $constraint->getCategoryName());
-        $this->assertEquals(array(), $constraint->getCategoryIn());
-        $this->assertEquals(array(), $constraint->getCategoryNotIn());
+        $this->assertEquals( 0, $constraint->getCat() );
+        $this->assertEquals( '', $constraint->getCategoryName() );
+        $this->assertEquals( array(), $constraint->getCategoryIn() );
+        $this->assertEquals( array(), $constraint->getCategoryNotIn() );
 
-        $catId = mt_rand(0, 1000);
-        $name = rand_str();
-        $catIn = array(1,2,3);
-        $catNotIn = array(4);
-        $catAnd = array(5,6);
+        $catId    = mt_rand( 0, 1000 );
+        $name     = rand_str();
+        $catIn    = array( 1, 2, 3 );
+        $catNotIn = array( 4 );
+        $catAnd   = array( 5, 6 );
 
-        $constraint->setCat($catId);
-        $constraint->setCategoryName($name);
-        $constraint->setCategoryIn($catIn);
-        $constraint->setCategoryNotIn($catNotIn);
-        $constraint->setCategoryAnd($catAnd);
+        $constraint->setCat( $catId );
+        $constraint->setCategoryName( $name );
+        $constraint->setCategoryIn( $catIn );
+        $constraint->setCategoryNotIn( $catNotIn );
+        $constraint->setCategoryAnd( $catAnd );
 
-        $this->assertEquals($catId, $constraint->getCat());
-        $this->assertEquals($name, $constraint->getCategoryName());
-        $this->assertEquals($catIn, $constraint->getCategoryIn());
-        $this->assertEquals($catNotIn, $constraint->getCategoryNotIn());
-        $this->assertEquals($catAnd, $constraint->getCategoryAnd());
+        $this->assertEquals( $catId, $constraint->getCat() );
+        $this->assertEquals( $name, $constraint->getCategoryName() );
+        $this->assertEquals( $catIn, $constraint->getCategoryIn() );
+        $this->assertEquals( $catNotIn, $constraint->getCategoryNotIn() );
+        $this->assertEquals( $catAnd, $constraint->getCategoryAnd() );
     }
 }
