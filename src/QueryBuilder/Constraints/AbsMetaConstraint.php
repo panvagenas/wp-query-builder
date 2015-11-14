@@ -26,7 +26,7 @@ class AbsMetaConstraint extends AbsConstraint {
     protected static $_wrap = '';
 
     /**
-     * @return mixed
+     * @return array
      * @throws \Exception
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}

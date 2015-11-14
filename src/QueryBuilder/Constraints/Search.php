@@ -19,5 +19,32 @@ namespace Pan\QueryBuilder\Constraints;
  * @since   TODO ${VERSION}
  */
 class Search extends AbsConstraint {
+    /**
+     * Search keyword
+     *
+     * @var string
+     */
+    protected $s = '';
 
+    /**
+     * @return string
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
+    public function getS() {
+        return $this->s;
+    }
+
+    /**
+     * @param string $s
+     *
+     * @return $this
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
+    public function setS( $s ) {
+        $this->s = (string) $s;
+
+        return $this;
+    }
 }

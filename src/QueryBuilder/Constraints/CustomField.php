@@ -99,18 +99,30 @@ class CustomField extends AbsMetaConstraint implements IfcCompareConstants, IfcR
 
             if ( is_array( $index ) && isset( $index['key'] ) ) {
                 $key     = $item['key'];
-                $value   = isset( $item['value'] ) ?: '';
-                $compare = isset( $item['compare'] ) ?: '';
-                $type    = isset( $item['type'] ) ?: '';
+                $value   = isset( $item['value'] ) ? $item['value'] : '';
+                $compare = isset( $item['compare'] ) ? $item['compare'] : '';
+                $type    = isset( $item['type'] ) ? $item['type'] : '';
 
-                if ( $this->validateAddValues( $key, $value, $compare, $type ) ) {
-                    $this->add( $key, $value, $compare, $type );
-                }
-                unset( $key, $value, $compare, $type );
+                $this->add( $key, $value, $compare, $type );
             }
         }
 
         return $this->meta_query;
+    }
+
+    /**
+     * @return array
+     * @throws \Exception
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
+    public function getArrayCopy() {
+        $out = parent::getArrayCopy();
+        if ( count( $out ) > 1 && $this->_relation ) {
+            $out['relation'] = $this->_relation;
+        }
+
+        return $out;
     }
 
     /**
