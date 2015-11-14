@@ -19,26 +19,27 @@ $pharFileAbsPath = "{$buildRoot}/{$pharFileName}";
  * Excluded dirs
  */
 $excludeDirs = array(
-	'.git',
-	'build',
-	'docs',
-	'tests',
+    '.git',
+    'build',
+    'docs',
+    'tests',
+    '.idea'
 );
 
 /**
  * Excluded files
  */
 $excludeFiles = array(
-	'.coveralls.yml',
-	'.gitattributes',
-	'.gitignore',
-	'.travis.yml',
-	'composer.json',
-	'composer.lock',
-	'licence',
-	'licence.txt',
-	'readme',
-	'readme.md',
+    '.coveralls.yml',
+    '.gitattributes',
+    '.gitignore',
+    '.travis.yml',
+    'composer.json',
+    'composer.lock',
+    'licence',
+    'licence.txt',
+    'readme',
+    'readme.md',
 );
 
 /**
@@ -51,11 +52,11 @@ $excludeFiles = array(
  * @return bool True if you need to recurse or if the item is acceptable
  */
 $fileFilter = function ( $file, $key, $iterator ) use ( $excludeDirs, $excludeFiles ) {
-	if ( $iterator->hasChildren() && ! in_array( strtolower( $file->getFilename() ), $excludeDirs ) ) {
-		return true;
-	}
+    if ( $iterator->hasChildren() && ! in_array( strtolower( $file->getFilename() ), $excludeDirs ) ) {
+        return true;
+    }
 
-	return $file->isFile() && ! in_array( strtolower( $file->getFilename() ), $excludeFiles );
+    return $file->isFile() && ! in_array( strtolower( $file->getFilename() ), $excludeFiles );
 };
 
 
@@ -66,20 +67,20 @@ $p->startBuffering();
 $p->setDefaultStub( 'vendor/autoload.php', 'vendor/autoload.php' );
 
 if ( file_exists( $pharFileAbsPath ) && is_readable( $pharFileAbsPath ) ) {
-	unlink( $pharFileAbsPath );
+    unlink( $pharFileAbsPath );
 }
 
 $gzFile = $pharFileAbsPath . '.gz';
 if ( file_exists( $gzFile ) && is_readable( $gzFile ) ) {
-	unlink( $gzFile );
+    unlink( $gzFile );
 }
 
 $indexFilePath   = "{$projectRoot}/index.php";
-$indexFileHandle = fopen( $indexFilePath, 'w');
+$indexFileHandle = fopen( $indexFilePath, 'w' );
 
-fwrite( $indexFileHandle, "<?php if(defined('WPINC')) require_once 'vendor/autoload.php';");
+fwrite( $indexFileHandle, "<?php if(defined('WPINC')) require_once 'vendor/autoload.php';" );
 
-fclose( $indexFileHandle);
+fclose( $indexFileHandle );
 
 $innerIterator = new RecursiveDirectoryIterator( $projectRoot, RecursiveDirectoryIterator::SKIP_DOTS );
 
@@ -92,5 +93,5 @@ $p->compress( Phar::GZ );
 $p->stopBuffering();
 
 if ( file_exists( $indexFilePath ) && is_readable( $indexFilePath ) ) {
-	unlink( $indexFilePath );
+    unlink( $indexFilePath );
 }
