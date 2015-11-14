@@ -113,4 +113,15 @@ class Builder {
 
         return $args;
     }
+
+    /**
+     * @return Query
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
+    public function crtQuery() {
+        $query = new Query( $this );
+
+        return $query;
+    }
 }

@@ -13,6 +13,7 @@
 namespace Pan\QueryBuilder\Constraints\Abs;
 
 use Pan\QueryBuilder\AbsArrayObject;
+use Pan\QueryBuilder\Builder;
 
 /**
  * Class Constraint
@@ -76,6 +77,13 @@ abstract class Constraint extends AbsArrayObject {
         return $out;
     }
 
+    /**
+     * @param $propName
+     *
+     * @return \WP_Error
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
     public function getDefault( $propName ) {
         if ( isset( $this->_defaults[ $propName ] ) ) {
             return $this->_defaults[ $propName ];
@@ -97,9 +105,25 @@ abstract class Constraint extends AbsArrayObject {
         return get_class( $this );
     }
 
+    /**
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
     public function reset() {
         foreach ( $this->_defaults as $index => $default ) {
             $this->{$index} = $default;
         }
+    }
+
+    /**
+     * @return Builder
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
+    public function crtAndAddBuilder() {
+        $builder = new Builder();
+        $builder->addConstraint( $this );
+
+        return $builder;
     }
 }
