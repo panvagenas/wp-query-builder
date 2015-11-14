@@ -37,5 +37,4 @@ class AbsMetaConstraint extends AbsConstraint {
         }
         throw new \Exception( 'Invalid implementation of ' . get_class( $this ) . ' class' );
     }
-
 }
