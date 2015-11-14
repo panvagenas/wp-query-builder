@@ -22,7 +22,7 @@ class Query {
      */
     protected $builder;
 
-    public function __construct(Builder $builder) {
+    public function __construct( Builder $builder ) {
         $this->builder = $builder;
     }
 
@@ -31,8 +31,9 @@ class Query {
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function getResult(){
-        $this->lastResult = new \WP_Query($this->builder->getQueryArgsArray());
+    public function getResult() {
+        $this->lastResult = new \WP_Query( $this->builder->getQueryArgsArray() );
+
         return $this->lastResult;
     }
 
@@ -43,18 +44,20 @@ class Query {
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function sort(array $postIds){
-        if(!$this->lastResult){
-            trigger_error('No lastResult found in '.__CLASS__);
-            return new \WP_Error('warning','No lastResult found in '.__CLASS__);
+    public function sort( array $postIds ) {
+        if ( ! $this->lastResult ) {
+            trigger_error( 'No lastResult found in ' . __CLASS__ );
+
+            return new \WP_Error( 'warning', 'No lastResult found in ' . __CLASS__ );
         }
 
-        usort( $this->lastResult->posts, function ( $a, $b ) use($postIds ) {
-            $aPos = array_search( $a->ID, $postIds );
-            $bPos = array_search( $b->ID, $postIds );
+        usort( $this->lastResult->posts,
+            function ( $a, $b ) use ( $postIds ) {
+                $aPos = array_search( $a->ID, $postIds );
+                $bPos = array_search( $b->ID, $postIds );
 
-            return ( $aPos < $bPos ) ? -1 : 1;
-        } );
+                return ( $aPos < $bPos ) ? - 1 : 1;
+            } );
 
         return $this->lastResult;
     }
