@@ -1,7 +1,7 @@
 <?php
 /**
  * Project: wp-query-builder
- * File: IfcCompareConstants.php
+ * File: CompareConstants.php
  * User: Panagiotis Vagenas <pan.vagenas@gmail.com>
  * Date: 11/11/2015
  * Time: 9:19 μμ
@@ -9,15 +9,15 @@
  * Copyright: 2015 Panagiotis Vagenas
  */
 
-namespace Pan\QueryBuilder\Constraints;
+namespace Pan\QueryBuilder\Constraints\Ifc;
 
 
 /**
- * Interface IfcCompareConstants
+ * Interface CompareConstants
  *
  * @package Pan\QueryBuilder\Constraints
  */
-interface IfcCompareConstants {
+interface CompareConstants {
     /**
      *
      */

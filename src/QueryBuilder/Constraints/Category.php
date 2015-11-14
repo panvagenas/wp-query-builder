@@ -11,6 +11,8 @@
 
 namespace Pan\QueryBuilder\Constraints;
 
+use Pan\QueryBuilder\Constraints\Abs\Constraint;
+
 /**
  * Show posts associated with certain categories
  *
@@ -18,7 +20,7 @@ namespace Pan\QueryBuilder\Constraints;
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @since   TODO ${VERSION}
  */
-class Category extends AbsConstraint {
+class Category extends Constraint {
     /**
      * use category id
      *

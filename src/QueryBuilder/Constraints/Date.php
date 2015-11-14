@@ -11,6 +11,9 @@
 
 namespace Pan\QueryBuilder\Constraints;
 
+use Pan\QueryBuilder\Constraints\Abs\Constraint;
+use Pan\QueryBuilder\Constraints\Ifc\CompareConstants;
+use Pan\QueryBuilder\Constraints\Ifc\RelationConstants;
 
 /**
  * Show posts associated with a certain time and date period
@@ -19,7 +22,7 @@ namespace Pan\QueryBuilder\Constraints;
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @since   TODO ${VERSION}
  */
-class Date extends AbsConstraint implements IfcRelationConstants, IfcCompareConstants {
+class Date extends Constraint implements RelationConstants, CompareConstants {
     protected static $_wrap = 'date_query';
     /**
      * @var array
@@ -110,7 +113,7 @@ class Date extends AbsConstraint implements IfcRelationConstants, IfcCompareCons
      */
     protected $inclusive = true;
     /**
-     * See {@link IfcCompareConstants}
+     * See {@link CompareConstants}
      *
      * @var string
      */

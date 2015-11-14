@@ -11,6 +11,11 @@
 
 namespace Pan\QueryBuilder\Constraints;
 
+use Pan\QueryBuilder\Constraints\Abs\MetaConstraint;
+use Pan\QueryBuilder\Constraints\Ifc\CompareConstants;
+use Pan\QueryBuilder\Constraints\Ifc\RelationConstants;
+use Pan\QueryBuilder\Constraints\Ifc\TypeConstants;
+
 /**
  * Show posts associated with a certain custom field.
  * (aka meta query)
@@ -19,7 +24,7 @@ namespace Pan\QueryBuilder\Constraints;
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @since   TODO ${VERSION}
  */
-class CustomField extends AbsMetaConstraint implements IfcCompareConstants, IfcRelationConstants, IfcTypeConstants {
+class CustomField extends MetaConstraint implements CompareConstants, RelationConstants, TypeConstants {
     /**
      * @var array
      */

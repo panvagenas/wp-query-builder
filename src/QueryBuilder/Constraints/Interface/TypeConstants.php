@@ -1,7 +1,7 @@
 <?php
 /**
  * Project: wp-query-builder
- * File: IfcTypeConstants.php
+ * File: TypeConstants.php
  * User: Panagiotis Vagenas <pan.vagenas@gmail.com>
  * Date: 11/11/2015
  * Time: 9:30 μμ
@@ -9,15 +9,14 @@
  * Copyright: 2015 Panagiotis Vagenas
  */
 
-namespace Pan\QueryBuilder\Constraints;
-
+namespace Pan\QueryBuilder\Constraints\Ifc;
 
 /**
- * Interface IfcTypeConstants
+ * Interface TypeConstants
  *
  * @package Pan\QueryBuilder\Constraints
  */
-interface IfcTypeConstants {
+interface TypeConstants {
     /**
      *
      */

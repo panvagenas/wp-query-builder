@@ -12,7 +12,7 @@
 namespace Pan\QueryBuilder;
 
 
-use Pan\QueryBuilder\Constraints\AbsConstraint;
+use Pan\QueryBuilder\Constraints\Abs\Constraint;
 
 /**
  * Class Builder
@@ -28,13 +28,13 @@ class Builder {
     protected $constraints = array();
 
     /**
-     * @param AbsConstraint $constraint
+     * @param Constraint $constraint
      *
      * @return $this|Builder
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function addConstraint( AbsConstraint $constraint ) {
+    public function addConstraint( Constraint $constraint ) {
         if ( $this->hasConstraint( $constraint->getName() ) ) {
             return $this->updateConstraint( $constraint );
         }
@@ -51,19 +51,19 @@ class Builder {
      * @since  TODO ${VERSION}
      */
     public function hasConstraint( $constraint ) {
-        $name = $constraint instanceof AbsConstraint ? $constraint->getName() : (string) $constraint;
+        $name = $constraint instanceof Constraint ? $constraint->getName() : (string) $constraint;
 
         return isset( $this->constraints[ $name ] );
     }
 
     /**
-     * @param AbsConstraint $newConstraint
+     * @param Constraint $newConstraint
      *
      * @return $this|Builder
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function updateConstraint( AbsConstraint $newConstraint ) {
+    public function updateConstraint( Constraint $newConstraint ) {
         if ( $oldConstraint = $this->getConstraint( $newConstraint->getName() ) ) {
             return $oldConstraint->exchangeArray( $newConstraint->getArrayCopy() );
         }
@@ -74,12 +74,12 @@ class Builder {
     /**
      * @param $constraint
      *
-     * @return AbsConstraint|null
+     * @return Constraint|null
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
     public function getConstraint( $constraint ) {
-        $name = $constraint instanceof AbsConstraint ? $constraint->getName() : (string) $constraint;
+        $name = $constraint instanceof Constraint ? $constraint->getName() : (string) $constraint;
 
         return $this->hasConstraint( $name ) ? $this->constraints[ $name ] : null;
     }
@@ -92,7 +92,7 @@ class Builder {
      * @since  TODO ${VERSION}
      */
     public function removeConstraint( $constraint ) {
-        $name = $constraint instanceof AbsConstraint ? $constraint->getName() : (string) $constraint;
+        $name = $constraint instanceof Constraint ? $constraint->getName() : (string) $constraint;
         unset( $this->constraints[ $name ] );
 
         return $this;
@@ -107,7 +107,7 @@ class Builder {
         $args = array();
 
         foreach ( $this->constraints as $constraint ) {
-            /* @var AbsConstraint $constraint */
+            /* @var Constraint $constraint */
             $args = array_merge( $args, $constraint->getArrayCopy() );
         }
 

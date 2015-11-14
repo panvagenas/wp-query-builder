@@ -11,6 +11,8 @@
 
 namespace Pan\QueryBuilder\Constraints;
 
+use Pan\QueryBuilder\Constraints\Abs\Constraint;
+
 /**
  * Stop the data retrieved from being added to the cache
  *
@@ -18,7 +20,7 @@ namespace Pan\QueryBuilder\Constraints;
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @since   TODO ${VERSION}
  */
-class Caching extends AbsConstraint {
+class Caching extends Constraint {
     /**
      * Post information cache
      *

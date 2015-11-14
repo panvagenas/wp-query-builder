@@ -11,6 +11,8 @@
 
 namespace Pan\QueryBuilder\Constraints;
 
+use Pan\QueryBuilder\Constraints\Abs\Constraint;
+
 /**
  * Show posts associated with certain type: {@link http://codex.wordpress.org/Post_Types}
  *
@@ -18,7 +20,7 @@ namespace Pan\QueryBuilder\Constraints;
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @since   TODO ${VERSION}
  */
-class Type extends AbsConstraint {
+class Type extends Constraint {
     /**
      * a post
      */

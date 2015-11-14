@@ -11,6 +11,8 @@
 
 namespace Pan\QueryBuilder\Constraints;
 
+use Pan\QueryBuilder\Constraints\Abs\Constraint;
+
 /**
  * Show content based on post and page parameters.
  * Remember that default `post_type` is only set to display posts but not pages
@@ -19,6 +21,6 @@ namespace Pan\QueryBuilder\Constraints;
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @since   TODO ${VERSION}
  */
-class Password extends AbsConstraint {
+class Password extends Constraint {
 
 }

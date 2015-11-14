@@ -1,7 +1,7 @@
 <?php
 /**
  * Project: wp-query-builder
- * File: AbsMetaConstraint.php
+ * File: MetaConstraint.php
  * User: Panagiotis Vagenas <pan.vagenas@gmail.com>
  * Date: 12/11/2015
  * Time: 11:38 μμ
@@ -9,17 +9,16 @@
  * Copyright: 2015 Panagiotis Vagenas
  */
 
-namespace Pan\QueryBuilder\Constraints;
-
+namespace Pan\QueryBuilder\Constraints\Abs;
 
 /**
- * Class AbsMetaConstraint
+ * Class MetaConstraint
  *
  * @package Pan\QueryBuilder\Constraints
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @since   TODO ${VERSION}
  */
-class AbsMetaConstraint extends AbsConstraint {
+class MetaConstraint extends Constraint {
     /**
      * @var string
      */

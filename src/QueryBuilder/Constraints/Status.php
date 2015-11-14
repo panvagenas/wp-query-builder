@@ -11,6 +11,8 @@
 
 namespace Pan\QueryBuilder\Constraints;
 
+use Pan\QueryBuilder\Constraints\Abs\Constraint;
+
 /**
  * Show posts associated with certain status:{@link http://codex.wordpress.org/Post_Status}
  *
@@ -18,7 +20,7 @@ namespace Pan\QueryBuilder\Constraints;
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @since   TODO ${VERSION}
  */
-class Status extends AbsConstraint {
+class Status extends Constraint {
     /**
      * a published post or page
      */

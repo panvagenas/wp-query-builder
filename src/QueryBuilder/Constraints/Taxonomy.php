@@ -11,6 +11,10 @@
 
 namespace Pan\QueryBuilder\Constraints;
 
+use Pan\QueryBuilder\Constraints\Abs\MetaConstraint;
+use Pan\QueryBuilder\Constraints\Ifc\CompareConstants;
+use Pan\QueryBuilder\Constraints\Ifc\RelationConstants;
+
 /**
  * Show posts associated with certain taxonomy: {@link http://codex.wordpress.org/Taxonomies}
  *
@@ -18,7 +22,7 @@ namespace Pan\QueryBuilder\Constraints;
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @since   TODO ${VERSION}
  */
-class Taxonomy extends AbsMetaConstraint implements IfcRelationConstants, IfcCompareConstants {
+class Taxonomy extends MetaConstraint implements RelationConstants, CompareConstants {
     /**
      * Term ID
      */
@@ -74,7 +78,7 @@ class Taxonomy extends AbsMetaConstraint implements IfcRelationConstants, IfcCom
     protected $tax_query = array();
     /**
      * The logical relationship between each inner taxonomy array when there is more than one.
-     * Possible values are {@link IfcRelationConstants::RELATION_AND}, {@link IfcRelationConstants::RELATION_OR}.
+     * Possible values are {@link RelationConstants::RELATION_AND}, {@link RelationConstants::RELATION_OR}.
      * Do not use with a single inner taxonomy array
      *
      * @var string

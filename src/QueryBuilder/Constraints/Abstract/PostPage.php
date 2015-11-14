@@ -1,7 +1,7 @@
 <?php
 /**
  * Project: wp-query-builder
- * File: AbsPostPage.php
+ * File: PostPage.php
  * User: Panagiotis Vagenas <pan.vagenas@gmail.com>
  * Date: 14/11/2015
  * Time: 12:06 πμ
@@ -9,24 +9,23 @@
  * Copyright: 2015 Panagiotis Vagenas
  */
 
-namespace Pan\QueryBuilder\Constraints;
-
+namespace Pan\QueryBuilder\Constraints\Abs;
 
 /**
- * Class AbsPostPage
+ * Class PostPage
  *
  * @package Pan\QueryBuilder\Constraints
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @since   TODO ${VERSION}
  */
-abstract class AbsPostPage extends AbsConstraint {
+abstract class PostPage extends Constraint {
     /**
      * Return only top level entries
      */
     const POST_PARENT_TOP_LEVEL = 0;
     /**
      * use page id to return only child pages.
-     * Set to {@link AbsPostPage::POST_PARENT_TOP_LEVEL} to return only top-level entries
+     * Set to {@link PostPage::POST_PARENT_TOP_LEVEL} to return only top-level entries
      *
      * @var int
      */

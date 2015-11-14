@@ -11,6 +11,9 @@
 
 namespace Pan\QueryBuilder\Constraints;
 
+use Pan\QueryBuilder\Constraints\Abs\Constraint;
+use Pan\QueryBuilder\Constraints\Ifc\TypeConstants;
+
 /**
  * Sort retrieved posts
  *
@@ -18,7 +21,7 @@ namespace Pan\QueryBuilder\Constraints;
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
  * @since   TODO ${VERSION}
  */
-class Order extends AbsConstraint implements IfcTypeConstants {
+class Order extends Constraint implements TypeConstants {
     /**
      * ascending order from lowest to highest values (1, 2, 3; a, b, c)
      */
@@ -85,7 +88,7 @@ class Order extends AbsConstraint implements IfcTypeConstants {
      * as you might naturally expect). Use `meta_value_num` instead for numeric values.
      *
      * You may also specify `meta_type` if you want to cast the meta value as a specific type.
-     * Possible values are all in {@link IfcTypeConstants}.
+     * Possible values are all in {@link TypeConstants}.
      */
     const ORDER_META_VALUE = 'meta_value';
     /**
