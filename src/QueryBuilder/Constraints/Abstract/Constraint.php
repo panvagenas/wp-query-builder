@@ -145,18 +145,4 @@ abstract class Constraint extends AbsArrayObject {
     public function getBuilder() {
         return $this->_builder;
     }
-
-    /**
-     * @param Builder $builder
-     *
-     * @return $this
-     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
-     */
-    public function setBuilder( Builder $builder ) {
-        $this->_builder = $builder;
-
-        return $this;
-    }
-
 }

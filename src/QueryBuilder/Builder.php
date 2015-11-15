@@ -26,6 +26,10 @@ class Builder {
      * @var array
      */
     protected $constraints = array();
+    /**
+     * @var Query
+     */
+    protected $query;
 
     /**
      * @param Constraint $constraint
@@ -119,9 +123,20 @@ class Builder {
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function crtQuery() {
-        $query = new Query( $this );
+    public function crtAttachQuery() {
+        if(!$this->query){
+            $this->query = new Query($this);
+        }
 
-        return $query;
+        return $this->query;
+    }
+
+    /**
+     * @return Query
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
+    public function getQuery() {
+        return $this->query;
     }
 }
