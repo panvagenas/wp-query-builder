@@ -74,4 +74,17 @@ class PostTest extends QueryBuilderUnitTestCase {
         $this->assertEquals($numOfPostWithParentP2, $wpQ->found_posts);
         $this->assertArraySubset($post2Children, wp_list_pluck($wpQ->posts, 'ID'));
     }
+
+    public function testQueeringByPostIn(){
+        $postIn = $this->factory()->post->create_many(5);
+        $this->factory()->post->create_many(4);
+
+        $post = new Post();
+        $post->setPostIn($postIn);
+        $q = $post->crtAttachBuilder()->crtAttachQuery();
+        $wpQ = $q->getResult();
+        $q->sort($postIn);
+
+        $this->assertEquals($postIn, wp_list_pluck($wpQ->posts, 'ID'));
+    }
 }
