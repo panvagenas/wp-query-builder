@@ -24,7 +24,7 @@ class PostTest extends QueryBuilderUnitTestCase {
         $post = new Post();
         $post->setP($wpPost->ID);
 
-        $wpQ = $post->crtAndAddBuilder()->crtQuery()->getResult();
+        $wpQ = $post->crtAttachBuilder()->crtQuery()->getResult();
 
         $this->assertEquals(1, $wpQ->found_posts);
         $this->assertContains($wpPost->ID, wp_list_pluck($wpQ->posts, 'ID'));
@@ -38,7 +38,7 @@ class PostTest extends QueryBuilderUnitTestCase {
         $post = new Post();
         $post->setName($wpPost->post_name);
 
-        $wpQ = $post->crtAndAddBuilder()->crtQuery()->getResult();
+        $wpQ = $post->crtAttachBuilder()->crtQuery()->getResult();
 
         $this->assertEquals(1, $wpQ->found_posts);
         $this->assertContains($wpPost->ID, wp_list_pluck($wpQ->posts, 'ID'));
@@ -58,7 +58,7 @@ class PostTest extends QueryBuilderUnitTestCase {
         $post = new Post();
         $post->setPostParent($wpPost1->ID);
 
-        $q1 = $post->crtAndAddBuilder()->crtQuery();
+        $q1 = $post->crtAttachBuilder()->crtQuery();
         $wpQ = $q1->getResult();
         $q1->sort($post1Children);
 
@@ -67,7 +67,7 @@ class PostTest extends QueryBuilderUnitTestCase {
 
         $post->setPostParent($wpPost2->ID);
 
-        $q2 = $post->crtAndAddBuilder()->crtQuery();
+        $q2 = $post->crtAttachBuilder()->crtQuery();
         $wpQ = $q2->getResult();
         $q2->sort($post2Children);
 

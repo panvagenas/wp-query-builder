@@ -27,6 +27,10 @@ abstract class Constraint extends AbsArrayObject {
      * @var array
      */
     protected $_defaults = array();
+    /**
+     * @var Builder
+     */
+    protected $_builder;
 
     /**
      * Constraint constructor.
@@ -120,10 +124,39 @@ abstract class Constraint extends AbsArrayObject {
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
-    public function crtAndAddBuilder() {
-        $builder = new Builder();
-        $builder->addConstraint( $this );
+    public function crtAttachBuilder() {
+        if(!$this->_builder){
+            $this->_builder = new Builder();
 
-        return $builder;
+        }
+
+        if (!$this->_builder->hasConstraint($this)){
+            $this->_builder->addConstraint($this);
+        }
+
+        return $this->_builder;
     }
+
+    /**
+     * @return Builder
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
+    public function getBuilder() {
+        return $this->_builder;
+    }
+
+    /**
+     * @param Builder $builder
+     *
+     * @return $this
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
+    public function setBuilder( Builder $builder ) {
+        $this->_builder = $builder;
+
+        return $this;
+    }
+
 }
