@@ -63,6 +63,36 @@ class Query {
     }
 
     /**
+     * @return array
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
+    public function getLastResultPostIds(){
+        $ids = $this->pluckLastResult('ID');
+        if(is_wp_error($ids)){
+            return array();
+        }
+
+        return $ids;
+    }
+
+    /**
+     * @param $field
+     *
+     * @return array|\WP_Error
+     * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
+     * @since  TODO ${VERSION}
+     */
+    public function pluckLastResult($field){
+        if(!$this->lastResult){
+            trigger_error( 'No lastResult found in ' . __CLASS__ );
+
+            return new \WP_Error( 'warning', 'No lastResult found in ' . __CLASS__ );
+        }
+        return wp_list_pluck($this->lastResult->posts, $field);
+    }
+
+    /**
      * @return \WP_Query
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
