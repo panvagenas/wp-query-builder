@@ -26,7 +26,7 @@ First you must include the library in your project. The suggested method is usin
 or run 
 
 ```sh
-~$ composer require panvagenas/wp-admin-notices
+~$ composer require panvagenas/wp-query-builder
 ```
 
 ### Basic Usage
@@ -95,6 +95,6 @@ along with this program.  If not, see http://www.gnu.org/licenses/
 
 ## Changelog
 
-### 1.0.0 <small>5555</tiny>
+### 1.0.0
 
 * Initial release
