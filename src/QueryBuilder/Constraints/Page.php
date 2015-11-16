@@ -38,6 +38,7 @@ class Page extends PostPage {
      * @return int
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getPageId() {
         return $this->page_id;
@@ -60,6 +61,7 @@ class Page extends PostPage {
      * @return string
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getPagename() {
         return $this->pagename;

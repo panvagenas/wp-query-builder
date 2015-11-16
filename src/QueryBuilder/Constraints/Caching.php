@@ -46,6 +46,7 @@ class Caching extends Constraint {
      * @return boolean
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function isCacheResults() {
         return $this->cache_results;
@@ -65,6 +66,7 @@ class Caching extends Constraint {
      * @return boolean
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function isUpdatePostMetaCache() {
         return $this->update_post_meta_cache;
@@ -84,6 +86,7 @@ class Caching extends Constraint {
      * @return boolean
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function isUpdatePostTermCache() {
         return $this->update_post_term_cache;

@@ -96,6 +96,7 @@ class Query {
      * @return \WP_Query
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getLastResult() {
         return $this->lastResult;
@@ -105,6 +106,7 @@ class Query {
      * @return Builder
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getBuilder() {
         return $this->builder;

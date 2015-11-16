@@ -32,6 +32,7 @@ class Search extends Constraint {
      * @return string
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getS() {
         return $this->s;

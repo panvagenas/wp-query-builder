@@ -60,6 +60,7 @@ class Type extends Constraint {
      * @return mixed
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getPostType() {
         return $this->post_type;

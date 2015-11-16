@@ -39,6 +39,7 @@ class Post extends PostPage {
      * @return int
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getP() {
         return $this->p;
@@ -61,6 +62,7 @@ class Post extends PostPage {
      * @return string
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getName() {
         return $this->name;

@@ -68,6 +68,7 @@ class Tag extends Constraint {
      * @return string
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getTag() {
         return $this->tag;
@@ -90,6 +91,7 @@ class Tag extends Constraint {
      * @return int
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getTagId() {
         return $this->tag_id;
@@ -112,6 +114,7 @@ class Tag extends Constraint {
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getTagAnd() {
         return $this->tag__and;
@@ -134,6 +137,7 @@ class Tag extends Constraint {
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getTagIn() {
         return $this->tag__in;
@@ -156,6 +160,7 @@ class Tag extends Constraint {
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getTagNotIn() {
         return $this->tag__not_in;
@@ -178,6 +183,7 @@ class Tag extends Constraint {
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getTagSlugAnd() {
         return $this->tag_slug__and;
@@ -200,6 +206,7 @@ class Tag extends Constraint {
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getTagSlugIn() {
         return $this->tag_slug__in;

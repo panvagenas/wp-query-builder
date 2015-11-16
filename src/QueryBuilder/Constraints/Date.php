@@ -135,6 +135,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
      * @return int
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getYear() {
         return $this->year;
@@ -209,6 +210,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
      * @return int
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getWeek() {
         return $this->week;
@@ -235,6 +237,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
      * @return int
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getDay() {
         return $this->day;
@@ -261,6 +264,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
      * @return int
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getHour() {
         return $this->hour;
@@ -287,6 +291,8 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
      * @return int
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
+     * @codeCoverageIgnore
      */
     public function getMinute() {
         return $this->minute;
@@ -313,6 +319,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
      * @return int
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getSecond() {
         return $this->second;
@@ -339,6 +346,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
      * @return array|string
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getAfter() {
         return $this->after;
@@ -379,6 +387,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
      * @return string
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getBefore() {
         return $this->before;
@@ -418,6 +427,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
      * @return boolean
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function isInclusive() {
         return $this->inclusive;
@@ -440,6 +450,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
      * @return string
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getCompare() {
         return $this->compare;
@@ -465,6 +476,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
      * @return string
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getColumn() {
         return $this->column;
@@ -487,6 +499,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
      * @return string
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getRelation() {
         return $this->relation;

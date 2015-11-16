@@ -89,6 +89,7 @@ class Pagination extends Constraint {
      * @return boolean
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function isNopaging() {
         return $this->nopaging;
@@ -111,6 +112,7 @@ class Pagination extends Constraint {
      * @return int
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getPostsPerPage() {
         return $this->posts_per_page;
@@ -133,6 +135,7 @@ class Pagination extends Constraint {
      * @return int
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getPostsPerArchivePage() {
         return $this->posts_per_archive_page;
@@ -155,6 +158,7 @@ class Pagination extends Constraint {
      * @return int
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getOffset() {
         return $this->offset;
@@ -177,6 +181,7 @@ class Pagination extends Constraint {
      * @return int
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getPaged() {
         return $this->paged;
@@ -199,6 +204,7 @@ class Pagination extends Constraint {
      * @return int
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getPage() {
         return $this->page;
@@ -221,6 +227,7 @@ class Pagination extends Constraint {
      * @return boolean
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function isIgnoreStickyPosts() {
         return $this->ignore_sticky_posts;

@@ -44,6 +44,7 @@ class ReturnFields extends Constraint {
      * @return string
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getFields() {
         return $this->fields;

@@ -135,6 +135,7 @@ class Builder {
      * @return Query
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getQuery() {
         return $this->query;

@@ -60,6 +60,7 @@ class Category extends Constraint {
      * @return int
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getCat() {
         return $this->cat;
@@ -79,6 +80,7 @@ class Category extends Constraint {
      * @return string
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getCategoryName() {
         return $this->category_name;
@@ -98,6 +100,7 @@ class Category extends Constraint {
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getCategoryAnd() {
         return $this->category__and;
@@ -117,6 +120,7 @@ class Category extends Constraint {
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getCategoryIn() {
         return $this->category__in;
@@ -136,6 +140,7 @@ class Category extends Constraint {
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getCategoryNotIn() {
         return $this->category__not_in;

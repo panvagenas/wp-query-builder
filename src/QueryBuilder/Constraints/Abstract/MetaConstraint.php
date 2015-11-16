@@ -34,6 +34,6 @@ class MetaConstraint extends Constraint {
         if ( isset( $this->{static::$_wrap} ) && static::$_wrap ) {
             return $this->{static::$_wrap};
         }
-        throw new \Exception( 'Invalid implementation of ' . get_class( $this ) . ' class' );
+        throw new \Exception( 'Invalid implementation of ' . get_class( $this ) . ' class' ); // @codeCoverageIgnore
     }
 }

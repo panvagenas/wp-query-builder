@@ -156,6 +156,7 @@ class Order extends Constraint implements TypeConstants {
      * @return array|string
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getOrder() {
         return $this->order;
@@ -186,6 +187,7 @@ class Order extends Constraint implements TypeConstants {
      * @return string
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getOrderby() {
         return $this->orderby;

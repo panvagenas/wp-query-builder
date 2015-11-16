@@ -75,6 +75,7 @@ class Status extends Constraint {
      * @return array|string
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getPostStatus() {
         return $this->post_status;

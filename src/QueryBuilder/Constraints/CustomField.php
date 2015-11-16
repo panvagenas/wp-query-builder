@@ -216,6 +216,7 @@ class CustomField extends MetaConstraint implements CompareConstants, RelationCo
      * @return bool
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function isValidCompare( $compare ) {
         return in_array( $compare, static::$__compare__, true );

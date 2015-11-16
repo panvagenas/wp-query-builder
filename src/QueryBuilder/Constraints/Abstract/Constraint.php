@@ -84,7 +84,7 @@ abstract class Constraint extends AbsArrayObject {
     /**
      * @param $propName
      *
-     * @return \WP_Error
+     * @return \WP_Error|mixed
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
@@ -125,13 +125,13 @@ abstract class Constraint extends AbsArrayObject {
      * @since  TODO ${VERSION}
      */
     public function crtAttachBuilder() {
-        if(!$this->_builder){
+        if ( ! $this->_builder ) {
             $this->_builder = new Builder();
 
         }
 
-        if (!$this->_builder->hasConstraint($this)){
-            $this->_builder->addConstraint($this);
+        if ( ! $this->_builder->hasConstraint( $this ) ) {
+            $this->_builder->addConstraint( $this );
         }
 
         return $this->_builder;
@@ -141,6 +141,7 @@ abstract class Constraint extends AbsArrayObject {
      * @return Builder
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getBuilder() {
         return $this->_builder;

@@ -53,6 +53,7 @@ class Author extends Constraint {
      * @return int
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getAuthor() {
         return $this->author;
@@ -72,6 +73,7 @@ class Author extends Constraint {
      * @return string
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getAuthorName() {
         return $this->author_name;
@@ -91,6 +93,7 @@ class Author extends Constraint {
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getAuthorIn() {
         return $this->author__in;
@@ -110,6 +113,7 @@ class Author extends Constraint {
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getAuthorNotIn() {
         return $this->author__not_in;

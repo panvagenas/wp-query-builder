@@ -23,6 +23,7 @@ abstract class PostPage extends Constraint {
      * Return only top level entries
      */
     const POST_PARENT_TOP_LEVEL = 0;
+
     /**
      * use page id to return only child pages.
      * Set to {@link PostPage::POST_PARENT_TOP_LEVEL} to return only top-level entries
@@ -68,6 +69,7 @@ abstract class PostPage extends Constraint {
      * @return int
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getPostParent() {
         return $this->post_parent;
@@ -90,6 +92,7 @@ abstract class PostPage extends Constraint {
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getPostParentIn() {
         return $this->post_parent__in;
@@ -112,6 +115,7 @@ abstract class PostPage extends Constraint {
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getPostParentNotIn() {
         return $this->post_parent__not_in;
@@ -134,6 +138,7 @@ abstract class PostPage extends Constraint {
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getPostIn() {
         return $this->post__in;
@@ -156,6 +161,7 @@ abstract class PostPage extends Constraint {
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getPostNotIn() {
         return $this->post__not_in;
@@ -178,6 +184,7 @@ abstract class PostPage extends Constraint {
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
+     * @codeCoverageIgnore
      */
     public function getPostNameIn() {
         return $this->post_name__in;
