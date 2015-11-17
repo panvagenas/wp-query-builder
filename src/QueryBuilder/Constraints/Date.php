@@ -367,7 +367,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
      */
     public function setAfter( $after ) {
 
-        if ( is_string( $after ) && strtotime( $after ) ) {
+        if ( (is_string($after) || is_numeric( $after )) && strtotime( $after ) ) {
             $this->after = $after;
         } elseif ( is_array( $after ) ) {
             $tmp = array();
@@ -376,14 +376,23 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
                 $tmp['year'] = $after['year'];
             }
 
-            $tmp['month'] = isset( $after['month'] )
-                            && $this->validateIntBetween( 1,
-                                                          12,
-                                                          $after['month'] ) ? $after['month'] : 12;
-            $tmp['day']   = isset( $after['day'] )
-                            && $this->validateIntBetween( 1,
-                                                          12,
-                                                          $after['day'] ) ? $after['day'] : 31;
+            $tmp['month'] = isset( $after['month'] ) && $this->validateIntBetween( 1, 12, $after['month'] )
+                ? $after['month'] : 12;
+
+            if(isset($after['day'])&& isset( $tmp['month'] )){
+                $year = isset($tmp['year']) ? $tmp['year'] : date('Y');
+                $month = $tmp['month'];
+
+                $timeStamp = strtotime("$year-$month");
+
+                if($timeStamp && $this->validateIntBetween( 1, date('t', $timeStamp), $after['day'] )){
+                    $tmp['day'] = $after['day'];
+                }
+            }
+
+            if(!$tmp){
+                return $this;
+            }
 
             $this->after = $tmp;
         }
