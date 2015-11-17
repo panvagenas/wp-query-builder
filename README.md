@@ -76,6 +76,23 @@ $wpQueryResult = $query->getResult();
 
 ## How it Works
 
+In short it's like 1, 2, 3:
+
+1. `Query` uses the `Builder` to get a valid set of `WP_Query` arguments
+2. `Builder` uses `Constraints` to form a valid set of `WP_Query` arguments
+3. `Constraints` define a valid set of arguments to use
+
+So you basically the workflow is as follows:
+
+1. Use `Constraints` to define limitation for `WP_Query` result set
+2. Pass them to `Builder` in order to get the arguments array
+3. Use the `Query` or `WP_Query` to get results
+
+## Why Bother?
+
+Because I really have a hard time to remember exact naming for `WP_Query` arguments. Let the IDE remember, that's why
+we have code completition.
+
 ## Licence
 
 Copyright (C) 2015 Panagiotis Vagenas <pan.vagenas@gmail.com>
