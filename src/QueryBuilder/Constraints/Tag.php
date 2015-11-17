@@ -75,7 +75,7 @@ class Tag extends Constraint {
     }
 
     /**
-     * @param string $tag
+     * @param string $tag use tag slug
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
@@ -121,7 +121,7 @@ class Tag extends Constraint {
     }
 
     /**
-     * @param array $tag__and
+     * @param array $tag__and use tag ids
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
@@ -144,7 +144,7 @@ class Tag extends Constraint {
     }
 
     /**
-     * @param array $tag__in
+     * @param array $tag__in use tag ids
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
@@ -167,7 +167,7 @@ class Tag extends Constraint {
     }
 
     /**
-     * @param array $tag__not_in
+     * @param array $tag__not_in use tag ids
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
@@ -190,7 +190,7 @@ class Tag extends Constraint {
     }
 
     /**
-     * @param array $tag_slug__and
+     * @param array $tag_slug__and use tag slugs
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
@@ -213,7 +213,7 @@ class Tag extends Constraint {
     }
 
     /**
-     * @param array $tag_slug__in
+     * @param array $tag_slug__in use tag slugs
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>

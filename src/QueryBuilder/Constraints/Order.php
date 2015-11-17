@@ -26,60 +26,74 @@ class Order extends Constraint implements TypeConstants {
      * ascending order from lowest to highest values (1, 2, 3; a, b, c)
      */
     const ORDER_DESC = 'DESC';
+
     /**
      * descending order from highest to lowest values (3, 2, 1; c, b, a).
      */
     const ORDER_ASC = 'ASC';
+
     /**
      * No order (available since Version 2.8)
      */
     const ORDER_NONE = 'none';
+
     /**
      * Order by author
      */
     const ORDER_AUTHOR = 'author';
+
     /**
      * Order by post id. Note the capitalization
      */
     const ORDER_ID = 'ID';
+
     /**
      * Order by title
      */
     const ORDER_TITLE = 'title';
+
     /**
      * Order by post name (post slug).
      */
     const ORDER_NAME = 'name';
+
     /**
      * Order by post type (available since Version 4.0).
      */
     const ORDER_TYPE = 'type';
+
     /**
      * Order by date
      */
     const ORDER_DATE = 'date';
+
     /**
      * Order by last modified date
      */
     const ORDER_MODIFIED = 'modified';
+
     /**
      * Order by post/page parent id
      */
     const ORDER_PARENT = 'parent';
+
     /**
      * Random order
      */
     const ORDER_RAND = 'rand';
+
     /**
      * Order by number of comments (available since Version 2.9)
      */
     const ORDER_COMMENT_COUNT = 'comment_count';
+
     /**
      * Order by Page Order. Used most often for Pages (*Order* field in the Edit Page Attributes box)
      * and for Attachments (the integer fields in the Insert / Upload Media Gallery dialog),
      * but could be used for any post type with distinct `menu_order` values (they all default to 0).
      */
     const ORDER_MENU_ORDER = 'menu_order';
+
     /**
      * Note that a `meta_key=keyname` must also be present in the query.
      *
@@ -91,19 +105,23 @@ class Order extends Constraint implements TypeConstants {
      * Possible values are all in {@link TypeConstants}.
      */
     const ORDER_META_VALUE = 'meta_value';
+
     /**
      * Order by numeric meta value (available since Version 2.8). Also note that a `meta_key=keyname`
      * must also be present in the query. This value allows for numerical sorting as noted above in `meta_value`
      */
     const ORDER_META_VALUE_NUM = 'meta_value_num';
+
     /**
      * Preserve post ID order given in the `post__in` array (available since Version 3.5)
      */
     const ORDER_POST__IN = 'post__in';
+
     /**
      *
      */
     const META_TYPE = 'meta_type';
+
     /**
      * Valid values for {@link Order;:$orderby}
      *
@@ -165,7 +183,8 @@ class Order extends Constraint implements TypeConstants {
     /**
      * FIXME For now we only make use if $order is a string due to luck of proper documentation from WordPress Codex
      *
-     * @param array|string $order
+     * @param array|string $order Designates the ascending or descending order of the `orderby` parameter. Defaults to
+     *                            `DESC`. An array can be used for multiple order/orderby sets
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
@@ -194,7 +213,8 @@ class Order extends Constraint implements TypeConstants {
     }
 
     /**
-     * @param string $orderby
+     * @param string $orderby Sort retrieved posts by parameter. Defaults to `date` (post_date). One or more options
+     *                        can be passed
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>

@@ -76,7 +76,8 @@ abstract class PostPage extends Constraint {
     }
 
     /**
-     * @param int $post_parent
+     * @param int $post_parent Use page id to return only child pages. Set to {@link PostPage::POST_PARENT_TOP_LEVEL}
+     *                         to return only top-level entries
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
@@ -99,7 +100,8 @@ abstract class PostPage extends Constraint {
     }
 
     /**
-     * @param array $post_parent__in
+     * @param array $post_parent__in Use post ids. Specify posts whose parent is in an array. (available since Version
+     *                               3.6)
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
@@ -122,7 +124,8 @@ abstract class PostPage extends Constraint {
     }
 
     /**
-     * @param array $post_parent__not_in
+     * @param array $post_parent__not_in Use post ids. Specify posts whose parent is not in an array. (available since
+     *                                   Version 3.6)
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
@@ -145,7 +148,9 @@ abstract class PostPage extends Constraint {
     }
 
     /**
-     * @param array $post__in
+     * @param array $post__in Use post ids. Specify posts to retrieve. **ATTENTION** If you use sticky posts, they will
+     *                        be included (prepended!) in the posts you retrieve whether you want it or not. To
+     *                        suppress this behaviour use {@link Pagination::$ignore_sticky_posts}.
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
@@ -168,7 +173,7 @@ abstract class PostPage extends Constraint {
     }
 
     /**
-     * @param array $post__not_in
+     * @param array $post__not_in Use post ids. Specify post **NOT** to retrieve
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
@@ -191,7 +196,7 @@ abstract class PostPage extends Constraint {
     }
 
     /**
-     * @param array $post_name__in
+     * @param array $post_name__in Use post slugs. Specify posts to retrieve. (Will be available in Version 4.4)
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>

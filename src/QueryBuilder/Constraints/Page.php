@@ -45,7 +45,7 @@ class Page extends PostPage {
     }
 
     /**
-     * @param int $page_id
+     * @param int $page_id use page id
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
@@ -68,7 +68,7 @@ class Page extends PostPage {
     }
 
     /**
-     * @param string $pagename
+     * @param string $pagename use page slug
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>

@@ -25,6 +25,7 @@ class Pagination extends Constraint {
      * Return all posts
      */
     const POSTS_PER_PAGE_ALL = - 1;
+
     /**
      * show all posts or use pagination. Default value is `false`, use paging
      *
@@ -96,7 +97,7 @@ class Pagination extends Constraint {
     }
 
     /**
-     * @param boolean $nopaging
+     * @param boolean $nopaging show all posts or use pagination. Default value is `false`, use paging
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
@@ -119,7 +120,7 @@ class Pagination extends Constraint {
     }
 
     /**
-     * @param int $posts_per_page
+     * @param int $posts_per_page Number of post to show per page
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
@@ -142,7 +143,7 @@ class Pagination extends Constraint {
     }
 
     /**
-     * @param int $posts_per_archive_page
+     * @param int $posts_per_archive_page Number of posts to show per page - on archive pages only
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
@@ -165,9 +166,10 @@ class Pagination extends Constraint {
     }
 
     /**
-     * @param int $offset
+     * @param int $offset Number of post to displace or pass over
      *
      * @return $this
+     * @see Pagination::$offset
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
      */
@@ -188,7 +190,7 @@ class Pagination extends Constraint {
     }
 
     /**
-     * @param int $paged
+     * @param int $paged Number of page
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
@@ -211,7 +213,7 @@ class Pagination extends Constraint {
     }
 
     /**
-     * @param int $page
+     * @param int $page Number of page for a static front page
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
@@ -234,7 +236,11 @@ class Pagination extends Constraint {
     }
 
     /**
-     * @param boolean $ignore_sticky_posts
+     * @param boolean $ignore_sticky_posts ignore post stickiness (available since Version 3.1).
+     *                                     <ul>
+     *                                     <li>`false`: (default): move sticky posts to the start of the set.</li>
+     *                                     <li>`true`: do not move sticky posts to the start of the set</li>
+     *                                     </ul>
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>

@@ -67,7 +67,7 @@ class Type extends Constraint {
     }
 
     /**
-     * @param string|array $post_type
+     * @param string|array $post_type Post Type(s)
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>

@@ -67,7 +67,7 @@ class Category extends Constraint {
     }
 
     /**
-     * @param int $cat
+     * @param int $cat Use category id
      *
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
@@ -87,7 +87,7 @@ class Category extends Constraint {
     }
 
     /**
-     * @param string $category_name
+     * @param string $category_name Use category slug
      *
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
@@ -127,7 +127,7 @@ class Category extends Constraint {
     }
 
     /**
-     * @param array $category__in
+     * @param array $category__in Use category id
      *
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
@@ -147,7 +147,7 @@ class Category extends Constraint {
     }
 
     /**
-     * @param array $category__not_in
+     * @param array $category__not_in Use category id
      *
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}

@@ -53,6 +53,8 @@ class Caching extends Constraint {
     }
 
     /**
+     * Post information cache
+     *
      * @param boolean $cache_results
      *
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
@@ -73,6 +75,8 @@ class Caching extends Constraint {
     }
 
     /**
+     * Post meta information cache
+     *
      * @param boolean $update_post_meta_cache
      *
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
@@ -93,6 +97,8 @@ class Caching extends Constraint {
     }
 
     /**
+     * Post term information cache
+     *
      * @param boolean $update_post_term_cache
      *
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>

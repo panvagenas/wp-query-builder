@@ -60,7 +60,7 @@ class Author extends Constraint {
     }
 
     /**
-     * @param int $author
+     * @param int $author Use author id
      *
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
@@ -80,7 +80,7 @@ class Author extends Constraint {
     }
 
     /**
-     * @param string $author_name
+     * @param string $author_name Use `user_nicename` - NOT name
      *
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
@@ -100,7 +100,7 @@ class Author extends Constraint {
     }
 
     /**
-     * @param array $author__in
+     * @param array $author__in Use author id (available since WP Version 3.7)
      *
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}
@@ -120,7 +120,7 @@ class Author extends Constraint {
     }
 
     /**
-     * @param array $author__not_in
+     * @param array $author__not_in Use author id (available since WP Version 3.7)
      *
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  TODO ${VERSION}

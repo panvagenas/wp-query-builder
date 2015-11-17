@@ -82,7 +82,7 @@ class Status extends Constraint {
     }
 
     /**
-     * @param array|string $post_status
+     * @param array|string $post_status Post Status
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>

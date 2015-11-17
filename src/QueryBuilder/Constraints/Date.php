@@ -142,7 +142,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
     }
 
     /**
-     * @param int $year
+     * @param int $year 4 digit year (e.g. 2011)
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
@@ -190,7 +190,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
     }
 
     /**
-     * @param int $month
+     * @param int $month Month number (from 1 to 12)
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
@@ -217,7 +217,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
     }
 
     /**
-     * @param int $week
+     * @param int $week Week of the year (from 0 to 53)
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
@@ -244,7 +244,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
     }
 
     /**
-     * @param int $day
+     * @param int $day Day of the month (from 1 to 31)
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
@@ -271,7 +271,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
     }
 
     /**
-     * @param int $hour
+     * @param int $hour Hour (from 0 to 23)
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
@@ -299,7 +299,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
     }
 
     /**
-     * @param int $minute
+     * @param int $minute Minute (from 0 to 59)
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
@@ -326,7 +326,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
     }
 
     /**
-     * @param int $second
+     * @param int $second Second (0 to 59)
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
@@ -353,7 +353,13 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
     }
 
     /**
-     * @param array|string $after
+     * @param array|string $after Date to retrieve posts after. Accepts {@link strtotime()}-compatible string, or array
+     *                            as follows:
+     *  <ul>
+     *      <li>year (string) Accepts any four-digit year. Default is empty</li>
+     *      <li>month (string) The month of the year. Accepts numbers 1-12. Default: 12</li>
+     *      <li>day (string) The day of the month. Accepts numbers 1-31. Default: last day of month</li>
+     *  </ul>
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
@@ -370,12 +376,14 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
                 $tmp['year'] = $after['year'];
             }
 
-            $tmp['month'] = isset( $after['month'] ) && $this->validateIntBetween( 1,
-                12,
-                $after['month'] ) ? $after['month'] : 12;
-            $tmp['day']   = isset( $after['day'] ) && $this->validateIntBetween( 1,
-                12,
-                $after['day'] ) ? $after['day'] : 31;
+            $tmp['month'] = isset( $after['month'] )
+                            && $this->validateIntBetween( 1,
+                                                          12,
+                                                          $after['month'] ) ? $after['month'] : 12;
+            $tmp['day']   = isset( $after['day'] )
+                            && $this->validateIntBetween( 1,
+                                                          12,
+                                                          $after['day'] ) ? $after['day'] : 31;
 
             $this->after = $tmp;
         }
@@ -394,7 +402,13 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
     }
 
     /**
-     * @param string $before
+     * @param string $before Date to retrieve posts before. Accepts {@link strtotime()}-compatible string, or array as
+     *                       follows:
+     *  <ul>
+     *      <li>year (string) Accepts any four-digit year. Default is empty</li>
+     *      <li>month (string) The month of the year. Accepts numbers 1-12. Default: 1</li>
+     *      <li>day (string) The day of the month. Accepts numbers 1-31. Default: 1</li>
+     *  </ul>
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
@@ -410,12 +424,14 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
                 $tmp['year'] = $before['year'];
             }
 
-            $tmp['month'] = isset( $before['month'] ) && $this->validateIntBetween( 1,
-                12,
-                $before['month'] ) ? $before['month'] : 1;
-            $tmp['day']   = isset( $before['day'] ) && $this->validateIntBetween( 1,
-                12,
-                $before['day'] ) ? $before['day'] : 1;
+            $tmp['month'] = isset( $before['month'] )
+                            && $this->validateIntBetween( 1,
+                                                          12,
+                                                          $before['month'] ) ? $before['month'] : 1;
+            $tmp['day']   = isset( $before['day'] )
+                            && $this->validateIntBetween( 1,
+                                                          12,
+                                                          $before['day'] ) ? $before['day'] : 1;
 
             $this->before = $tmp;
         }
@@ -434,7 +450,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
     }
 
     /**
-     * @param boolean $inclusive
+     * @param boolean $inclusive For after/before, whether exact value should be matched or not. Default is true.
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
@@ -457,7 +473,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
     }
 
     /**
-     * @param string $compare
+     * @param string $compare Use {@link CompareConstants} constants
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
@@ -483,7 +499,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
     }
 
     /**
-     * @param string $column
+     * @param string $column Column to query against. Default: `post_date`
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
@@ -506,7 +522,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
     }
 
     /**
-     * @param string $relation
+     * @param string $relation OR or AND, how the sub-arrays should be compared. Default: AND
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>

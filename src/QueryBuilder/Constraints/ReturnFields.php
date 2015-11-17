@@ -51,7 +51,7 @@ class ReturnFields extends Constraint {
     }
 
     /**
-     * @param string $fields
+     * @param string $fields Which fields to return
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>

@@ -39,7 +39,7 @@ class Search extends Constraint {
     }
 
     /**
-     * @param string $s
+     * @param string $s Search keyword
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
