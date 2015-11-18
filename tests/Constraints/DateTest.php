@@ -57,4 +57,28 @@ class DateTest extends QueryBuilderUnitTestCase {
         $date->setAfter( '2015-06-16' );
         $this->assertEquals( 5, $q->getResult()->found_posts );
     }
+
+    public function testBefore() {
+        $date = new Date();
+
+        $date->setBefore( array( 'year' => 2015 ) );
+        $q = $date->crtAttachBuilder()->crtAttachQuery();
+        $this->assertEquals( 10, $q->getResult()->found_posts );
+
+        $date->setBefore( array( 'year' => 2015, 'month' => 4 ) );
+        $this->assertEquals( 15, $q->getResult()->found_posts );
+
+        $date->setBefore( array( 'year' => 2015, 'month' => 6, 'day' => 16 ) );
+        $this->assertEquals( 20, $q->getResult()->found_posts );
+
+        $date->setBefore( '2015' );
+        $q = $date->crtAttachBuilder()->crtAttachQuery();
+        $this->assertEquals( 10, $q->getResult()->found_posts );
+
+        $date->setBefore( '2015-04' );
+        $this->assertEquals( 15, $q->getResult()->found_posts );
+
+        $date->setBefore( '2015-06-16' );
+        $this->assertEquals( 20, $q->getResult()->found_posts );
+    }
 }
