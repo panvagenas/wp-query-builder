@@ -38,6 +38,8 @@ $excludeFiles = array(
     'composer.lock',
     'licence',
     'licence.txt',
+    'license',
+    'license.txt',
     'readme',
     'readme.md',
 );
