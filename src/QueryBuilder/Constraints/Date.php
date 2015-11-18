@@ -367,7 +367,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
      */
     public function setAfter( $after ) {
 
-        if ( (is_string($after) || is_numeric( $after )) && strtotime( $after ) ) {
+        if ( ( is_string( $after ) || is_numeric( $after ) ) && strtotime( $after ) ) {
             $this->after = $after;
         } elseif ( is_array( $after ) ) {
             $tmp = array();
@@ -379,18 +379,18 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
             $tmp['month'] = isset( $after['month'] ) && $this->validateIntBetween( 1, 12, $after['month'] )
                 ? $after['month'] : 12;
 
-            if(isset($after['day'])&& isset( $tmp['month'] )){
-                $year = isset($tmp['year']) ? $tmp['year'] : date('Y');
+            if ( isset( $after['day'] ) && isset( $tmp['month'] ) ) {
+                $year  = isset( $tmp['year'] ) ? $tmp['year'] : date( 'Y' );
                 $month = $tmp['month'];
 
-                $timeStamp = strtotime("$year-$month");
+                $timeStamp = strtotime( "$year-$month" );
 
-                if($timeStamp && $this->validateIntBetween( 1, date('t', $timeStamp), $after['day'] )){
+                if ( $timeStamp && $this->validateIntBetween( 1, date( 't', $timeStamp ), $after['day'] ) ) {
                     $tmp['day'] = $after['day'];
                 }
             }
 
-            if(!$tmp){
+            if ( ! $tmp ) {
                 return $this;
             }
 
@@ -431,16 +431,16 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
 
             $tmp['year'] = isset( $before['year'] )
                            && $this->validateIntBetween( 1000, 9999, $before['year'] )
-                ? $before['year'] : date('Y');
+                ? $before['year'] : date( 'Y' );
 
             $tmp['month'] = isset( $before['month'] )
                             && $this->validateIntBetween( 1, 12, $before['month'] )
                 ? $before['month'] : 1;
 
-            $timeStamp = strtotime("{$tmp['year']}-{$tmp['month']}");
+            $timeStamp = strtotime( "{$tmp['year']}-{$tmp['month']}" );
 
-            $tmp['day']   = isset( $before['day'] )
-                            && $this->validateIntBetween( 1, date('t', $timeStamp), $before['day'] )
+            $tmp['day'] = isset( $before['day'] )
+                          && $this->validateIntBetween( 1, date( 't', $timeStamp ), $before['day'] )
                 ? $before['day'] : 1;
 
             $this->before = $tmp;

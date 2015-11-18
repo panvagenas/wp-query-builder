@@ -45,7 +45,7 @@ class Query {
      * @since  1.0.0
      */
     public function sort( array $postIds ) {
-        if ( ! $this->lastResult || !$this->lastResult->posts ) {
+        if ( ! $this->lastResult || ! $this->lastResult->posts ) {
             trigger_error( 'No lastResult found in ' . __CLASS__ );
 
             return new \WP_Error( 'warning', 'No lastResult found in ' . __CLASS__ );
@@ -67,9 +67,9 @@ class Query {
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  1.0.0
      */
-    public function getLastResultPostIds(){
-        $ids = $this->pluckLastResult('ID');
-        if(is_wp_error($ids)){
+    public function getLastResultPostIds() {
+        $ids = $this->pluckLastResult( 'ID' );
+        if ( is_wp_error( $ids ) ) {
             return array();
         }
 
@@ -83,13 +83,14 @@ class Query {
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  1.0.0
      */
-    public function pluckLastResult($field){
-        if(!$this->lastResult){
+    public function pluckLastResult( $field ) {
+        if ( ! $this->lastResult ) {
             trigger_error( 'No lastResult found in ' . __CLASS__ );
 
             return new \WP_Error( 'warning', 'No lastResult found in ' . __CLASS__ );
         }
-        return wp_list_pluck($this->lastResult->posts, $field);
+
+        return wp_list_pluck( $this->lastResult->posts, $field );
     }
 
     /**

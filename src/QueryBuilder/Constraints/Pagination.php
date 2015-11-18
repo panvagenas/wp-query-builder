@@ -169,7 +169,7 @@ class Pagination extends Constraint {
      * @param int $offset Number of post to displace or pass over
      *
      * @return $this
-     * @see Pagination::$offset
+     * @see    Pagination::$offset
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
      * @since  1.0.0
      */

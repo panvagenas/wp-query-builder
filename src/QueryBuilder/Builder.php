@@ -124,8 +124,8 @@ class Builder {
      * @since  1.0.0
      */
     public function crtAttachQuery() {
-        if(!$this->query){
-            $this->query = new Query($this);
+        if ( ! $this->query ) {
+            $this->query = new Query( $this );
         }
 
         return $this->query;
