@@ -91,7 +91,7 @@ So you basically the workflow is as follows:
 ## Why Bother?
 
 Because I really have a hard time to remember exact naming for `WP_Query` arguments. Let the IDE remember, that's why
-we have code completition.
+we have code completion.
 
 ## Licence
 
