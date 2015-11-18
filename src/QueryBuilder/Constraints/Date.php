@@ -102,7 +102,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
      * * month (string) The month of the year. Accepts numbers 1-12. Default: 1
      * * day (string) The day of the month. Accepts numbers 1-31. Default: 1
      *
-     * @var string
+     * @var string|array
      */
     protected $before = '';
     /**
@@ -429,18 +429,19 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
         } elseif ( is_array( $before ) ) {
             $tmp = array();
 
-            if ( isset( $before['year'] ) && $this->validateIntBetween( 1000, 9999, $before['year'] ) ) {
-                $tmp['year'] = $before['year'];
-            }
+            $tmp['year'] = isset( $before['year'] )
+                           && $this->validateIntBetween( 1000, 9999, $before['year'] )
+                ? $before['year'] : date('Y');
 
             $tmp['month'] = isset( $before['month'] )
-                            && $this->validateIntBetween( 1,
-                                                          12,
-                                                          $before['month'] ) ? $before['month'] : 1;
+                            && $this->validateIntBetween( 1, 12, $before['month'] )
+                ? $before['month'] : 1;
+
+            $timeStamp = strtotime("{$tmp['year']}-{$tmp['month']}");
+
             $tmp['day']   = isset( $before['day'] )
-                            && $this->validateIntBetween( 1,
-                                                          12,
-                                                          $before['day'] ) ? $before['day'] : 1;
+                            && $this->validateIntBetween( 1, date('t', $timeStamp), $before['day'] )
+                ? $before['day'] : 1;
 
             $this->before = $tmp;
         }
