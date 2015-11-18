@@ -5,7 +5,7 @@
  * User: Panagiotis Vagenas <pan.vagenas@gmail.com>
  * Date: 10/11/2015
  * Time: 12:32 πμ
- * Since: TODO ${VERSION}
+ * Since: 1.0.0
  * Copyright: 2015 Panagiotis Vagenas
  */
 
@@ -20,7 +20,7 @@ use Pan\QueryBuilder\Constraints\Ifc\RelationConstants;
  *
  * @package Pan\QueryBuilder\Constraints
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
- * @since   TODO ${VERSION}
+ * @since   1.0.0
  */
 class Taxonomy extends MetaConstraint implements RelationConstants, CompareConstants {
     /**
@@ -89,7 +89,7 @@ class Taxonomy extends MetaConstraint implements RelationConstants, CompareConst
      * @return array
      * @throws \Exception
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function getArrayCopy() {
         $out = parent::getArrayCopy();
@@ -105,7 +105,7 @@ class Taxonomy extends MetaConstraint implements RelationConstants, CompareConst
      *
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function exchangeArray( $data ) {
         $this->tax_query = array();
@@ -133,7 +133,7 @@ class Taxonomy extends MetaConstraint implements RelationConstants, CompareConst
      * @param $relation
      *
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setRelation( $relation ) {
         if ( ! $this->isValidRelation( $relation ) ) {
@@ -147,7 +147,7 @@ class Taxonomy extends MetaConstraint implements RelationConstants, CompareConst
      *
      * @return bool
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function isValidRelation( $relation ) {
         return in_array( $relation, static::$__relation__, true );
@@ -169,7 +169,7 @@ class Taxonomy extends MetaConstraint implements RelationConstants, CompareConst
      *
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function add(
         $taxonomy,
@@ -214,7 +214,7 @@ class Taxonomy extends MetaConstraint implements RelationConstants, CompareConst
      *
      * @return bool
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function validateAddValues( $taxonomy, $terms, $field = self::FIELD_TERM_ID, $operator = self::IN ) {
         $invalid = array();

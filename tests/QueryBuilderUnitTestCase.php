@@ -5,7 +5,7 @@
  * User: Panagiotis Vagenas <pan.vagenas@gmail.com>
  * Date: 10/11/2015
  * Time: 8:57 πμ
- * Since: TODO ${VERSION}
+ * Since: 1.0.0
  * Copyright: 2015 Panagiotis Vagenas
  */
 
@@ -17,7 +17,7 @@ class QueryBuilderUnitTestCase extends \WP_UnitTestCase {
      * @return QueryBuilderUnitTestFactory
      * @static
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     protected static function factory() {
         static $factory = null;

@@ -5,7 +5,7 @@
  * User: Panagiotis Vagenas <pan.vagenas@gmail.com>
  * Date: 9/11/2015
  * Time: 7:43 μμ
- * Since: TODO ${VERSION}
+ * Since: 1.0.0
  * Copyright: 2015 Panagiotis Vagenas
  */
 
@@ -20,7 +20,7 @@ use Pan\QueryBuilder\Constraints\Ifc\RelationConstants;
  *
  * @package Pan\QueryBuilder\Constraints
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
- * @since   TODO ${VERSION}
+ * @since   1.0.0
  */
 class Date extends Constraint implements RelationConstants, CompareConstants {
     protected static $_wrap = 'date_query';
@@ -134,7 +134,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
     /**
      * @return int
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getYear() {
@@ -146,7 +146,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setYear( $year ) {
         $year = (string) $year;
@@ -166,7 +166,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
      *
      * @return bool
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     protected function validateIntBetween( $start, $end, $subject, $inclusive = true ) {
         if ( is_numeric( $subject ) ) {
@@ -183,7 +183,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
     /**
      * @return int
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function getMonth() {
         return $this->month;
@@ -194,7 +194,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setMonth( $month ) {
         $month = (int) $month;
@@ -209,7 +209,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
     /**
      * @return int
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getWeek() {
@@ -221,7 +221,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setWeek( $week ) {
         $week = (int) $week;
@@ -236,7 +236,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
     /**
      * @return int
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getDay() {
@@ -248,7 +248,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setDay( $day ) {
         $day = (int) $day;
@@ -263,7 +263,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
     /**
      * @return int
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getHour() {
@@ -275,7 +275,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setHour( $hour ) {
         $hour = (int) $hour;
@@ -290,7 +290,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
     /**
      * @return int
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      * @codeCoverageIgnore
      */
@@ -303,7 +303,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setMinute( $minute ) {
         $minute = (int) $minute;
@@ -318,7 +318,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
     /**
      * @return int
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getSecond() {
@@ -330,7 +330,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setSecond( $second ) {
         $second = (int) $second;
@@ -345,7 +345,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
     /**
      * @return array|string
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getAfter() {
@@ -363,7 +363,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setAfter( $after ) {
 
@@ -403,7 +403,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
     /**
      * @return string
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getBefore() {
@@ -421,7 +421,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setBefore( $before ) {
         if ( is_string( $before ) && strtotime( $before ) ) {
@@ -452,7 +452,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
     /**
      * @return boolean
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function isInclusive() {
@@ -464,7 +464,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setInclusive( $inclusive ) {
         $this->inclusive = (bool) $inclusive;
@@ -475,7 +475,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
     /**
      * @return string
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getCompare() {
@@ -487,7 +487,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setCompare( $compare ) {
 
@@ -501,7 +501,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
     /**
      * @return string
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getColumn() {
@@ -513,7 +513,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setColumn( $column ) {
         $this->column = (string) $column;
@@ -524,7 +524,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
     /**
      * @return string
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getRelation() {
@@ -536,7 +536,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setRelation( $relation ) {
         if ( in_array( $relation, static::$__relation__, true ) ) {
@@ -549,7 +549,7 @@ class Date extends Constraint implements RelationConstants, CompareConstants {
     /**
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function getArrayCopy() {
         return array( self::$_wrap => parent::getArrayCopy() );

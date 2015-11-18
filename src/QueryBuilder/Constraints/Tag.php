@@ -5,7 +5,7 @@
  * User: Panagiotis Vagenas <pan.vagenas@gmail.com>
  * Date: 9/11/2015
  * Time: 7:41 μμ
- * Since: TODO ${VERSION}
+ * Since: 1.0.0
  * Copyright: 2015 Panagiotis Vagenas
  */
 
@@ -18,7 +18,7 @@ use Pan\QueryBuilder\Constraints\Abs\Constraint;
  *
  * @package Pan\QueryBuilder\Constraints
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
- * @since   TODO ${VERSION}
+ * @since   1.0.0
  */
 class Tag extends Constraint {
     /**
@@ -67,7 +67,7 @@ class Tag extends Constraint {
     /**
      * @return string
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getTag() {
@@ -79,7 +79,7 @@ class Tag extends Constraint {
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setTag( $tag ) {
         $this->tag = (string) $tag;
@@ -90,7 +90,7 @@ class Tag extends Constraint {
     /**
      * @return int
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getTagId() {
@@ -102,7 +102,7 @@ class Tag extends Constraint {
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setTagId( $tag_id ) {
         $this->tag_id = (int) $tag_id;
@@ -113,7 +113,7 @@ class Tag extends Constraint {
     /**
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getTagAnd() {
@@ -125,7 +125,7 @@ class Tag extends Constraint {
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setTagAnd( $tag__and ) {
         $this->tag__and = (array) $tag__and;
@@ -136,7 +136,7 @@ class Tag extends Constraint {
     /**
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getTagIn() {
@@ -148,7 +148,7 @@ class Tag extends Constraint {
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setTagIn( $tag__in ) {
         $this->tag__in = (array) $tag__in;
@@ -159,7 +159,7 @@ class Tag extends Constraint {
     /**
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getTagNotIn() {
@@ -171,7 +171,7 @@ class Tag extends Constraint {
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setTagNotIn( $tag__not_in ) {
         $this->tag__not_in = (array) $tag__not_in;
@@ -182,7 +182,7 @@ class Tag extends Constraint {
     /**
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getTagSlugAnd() {
@@ -194,7 +194,7 @@ class Tag extends Constraint {
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setTagSlugAnd( $tag_slug__and ) {
         $this->tag_slug__and = (array) $tag_slug__and;
@@ -205,7 +205,7 @@ class Tag extends Constraint {
     /**
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getTagSlugIn() {
@@ -217,7 +217,7 @@ class Tag extends Constraint {
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setTagSlugIn( $tag_slug__in ) {
         $this->tag_slug__in = (array) $tag_slug__in;

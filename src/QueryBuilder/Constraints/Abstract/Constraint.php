@@ -20,7 +20,7 @@ use Pan\QueryBuilder\Builder;
  *
  * @package Pan\QueryBuilder\Constraints
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
- * @since   TODO ${VERSION}
+ * @since   1.0.0
  */
 abstract class Constraint extends AbsArrayObject {
     /**
@@ -40,7 +40,7 @@ abstract class Constraint extends AbsArrayObject {
      * @param string $iterator_class
      *
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function __construct( array $input = array(), $flags = 3, $iterator_class = "ArrayIterator" ) {
         parent::__construct( $input, $flags, $iterator_class );
@@ -49,7 +49,7 @@ abstract class Constraint extends AbsArrayObject {
 
     /**
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     protected function setDefaults() {
         if ( ! empty( $this->_defaults ) ) {
@@ -67,7 +67,7 @@ abstract class Constraint extends AbsArrayObject {
     /**
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function getArrayCopy() {
         $out = array();
@@ -86,7 +86,7 @@ abstract class Constraint extends AbsArrayObject {
      *
      * @return \WP_Error|mixed
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function getDefault( $propName ) {
         if ( isset( $this->_defaults[ $propName ] ) ) {
@@ -103,7 +103,7 @@ abstract class Constraint extends AbsArrayObject {
     /**
      * @return string
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function getName() {
         return get_class( $this );
@@ -111,7 +111,7 @@ abstract class Constraint extends AbsArrayObject {
 
     /**
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function reset() {
         foreach ( $this->_defaults as $index => $default ) {
@@ -122,7 +122,7 @@ abstract class Constraint extends AbsArrayObject {
     /**
      * @return Builder
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function crtAttachBuilder() {
         if ( ! $this->_builder ) {
@@ -140,7 +140,7 @@ abstract class Constraint extends AbsArrayObject {
     /**
      * @return Builder
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getBuilder() {

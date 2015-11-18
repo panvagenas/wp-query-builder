@@ -5,7 +5,7 @@
  * User: Panagiotis Vagenas <pan.vagenas@gmail.com>
  * Date: 9/11/2015
  * Time: 7:42 μμ
- * Since: TODO ${VERSION}
+ * Since: 1.0.0
  * Copyright: 2015 Panagiotis Vagenas
  */
 
@@ -18,7 +18,7 @@ use Pan\QueryBuilder\Constraints\Abs\PostPage;
  *
  * @package Pan\QueryBuilder\Constraints
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
- * @since   TODO ${VERSION}
+ * @since   1.0.0
  */
 class Page extends PostPage {
     /**
@@ -37,7 +37,7 @@ class Page extends PostPage {
     /**
      * @return int
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getPageId() {
@@ -49,7 +49,7 @@ class Page extends PostPage {
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setPageId( $page_id ) {
         $this->page_id = (int) $page_id;
@@ -60,7 +60,7 @@ class Page extends PostPage {
     /**
      * @return string
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getPagename() {
@@ -72,7 +72,7 @@ class Page extends PostPage {
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setPagename( $pagename ) {
         $this->pagename = (string) $pagename;

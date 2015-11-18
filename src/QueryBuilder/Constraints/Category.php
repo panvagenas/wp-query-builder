@@ -5,7 +5,7 @@
  * User: Panagiotis Vagenas <pan.vagenas@gmail.com>
  * Date: 9/11/2015
  * Time: 7:41 μμ
- * Since: TODO ${VERSION}
+ * Since: 1.0.0
  * Copyright: 2015 Panagiotis Vagenas
  */
 
@@ -18,7 +18,7 @@ use Pan\QueryBuilder\Constraints\Abs\Constraint;
  *
  * @package Pan\QueryBuilder\Constraints
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
- * @since   TODO ${VERSION}
+ * @since   1.0.0
  */
 class Category extends Constraint {
     /**
@@ -59,7 +59,7 @@ class Category extends Constraint {
     /**
      * @return int
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getCat() {
@@ -70,7 +70,7 @@ class Category extends Constraint {
      * @param int $cat Use category id
      *
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setCat( $cat ) {
         $this->cat = (int) $cat;
@@ -79,7 +79,7 @@ class Category extends Constraint {
     /**
      * @return string
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getCategoryName() {
@@ -90,7 +90,7 @@ class Category extends Constraint {
      * @param string $category_name Use category slug
      *
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setCategoryName( $category_name ) {
         $this->category_name = (string) $category_name;
@@ -99,7 +99,7 @@ class Category extends Constraint {
     /**
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getCategoryAnd() {
@@ -110,7 +110,7 @@ class Category extends Constraint {
      * @param array $category__and
      *
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setCategoryAnd( $category__and ) {
         $this->category__and = (array) $category__and;
@@ -119,7 +119,7 @@ class Category extends Constraint {
     /**
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getCategoryIn() {
@@ -130,7 +130,7 @@ class Category extends Constraint {
      * @param array $category__in Use category id
      *
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setCategoryIn( $category__in ) {
         $this->category__in = (array) $category__in;
@@ -139,7 +139,7 @@ class Category extends Constraint {
     /**
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getCategoryNotIn() {
@@ -150,7 +150,7 @@ class Category extends Constraint {
      * @param array $category__not_in Use category id
      *
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setCategoryNotIn( $category__not_in ) {
         $this->category__not_in = (array) $category__not_in;

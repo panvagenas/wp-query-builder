@@ -5,7 +5,7 @@
  * User: Panagiotis Vagenas <pan.vagenas@gmail.com>
  * Date: 14/11/2015
  * Time: 12:06 πμ
- * Since: TODO ${VERSION}
+ * Since: 1.0.0
  * Copyright: 2015 Panagiotis Vagenas
  */
 
@@ -16,7 +16,7 @@ namespace Pan\QueryBuilder\Constraints\Abs;
  *
  * @package Pan\QueryBuilder\Constraints
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
- * @since   TODO ${VERSION}
+ * @since   1.0.0
  */
 abstract class PostPage extends Constraint {
     /**
@@ -68,7 +68,7 @@ abstract class PostPage extends Constraint {
     /**
      * @return int
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getPostParent() {
@@ -81,7 +81,7 @@ abstract class PostPage extends Constraint {
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setPostParent( $post_parent ) {
         $this->post_parent = (int) $post_parent;
@@ -92,7 +92,7 @@ abstract class PostPage extends Constraint {
     /**
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getPostParentIn() {
@@ -105,7 +105,7 @@ abstract class PostPage extends Constraint {
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setPostParentIn( $post_parent__in ) {
         $this->post_parent__in = (array) $post_parent__in;
@@ -116,7 +116,7 @@ abstract class PostPage extends Constraint {
     /**
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getPostParentNotIn() {
@@ -129,7 +129,7 @@ abstract class PostPage extends Constraint {
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setPostParentNotIn( $post_parent__not_in ) {
         $this->post_parent__not_in = (array) $post_parent__not_in;
@@ -140,7 +140,7 @@ abstract class PostPage extends Constraint {
     /**
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getPostIn() {
@@ -154,7 +154,7 @@ abstract class PostPage extends Constraint {
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setPostIn( $post__in ) {
         $this->post__in = (array) $post__in;
@@ -165,7 +165,7 @@ abstract class PostPage extends Constraint {
     /**
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getPostNotIn() {
@@ -177,7 +177,7 @@ abstract class PostPage extends Constraint {
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setPostNotIn( $post__not_in ) {
         $this->post__not_in = (array) $post__not_in;
@@ -188,7 +188,7 @@ abstract class PostPage extends Constraint {
     /**
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getPostNameIn() {
@@ -200,7 +200,7 @@ abstract class PostPage extends Constraint {
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setPostNameIn( $post_name__in ) {
         $this->post_name__in = (array) $post_name__in;

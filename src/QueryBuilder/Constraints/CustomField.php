@@ -5,7 +5,7 @@
  * User: Panagiotis Vagenas <pan.vagenas@gmail.com>
  * Date: 9/11/2015
  * Time: 7:43 μμ
- * Since: TODO ${VERSION}
+ * Since: 1.0.0
  * Copyright: 2015 Panagiotis Vagenas
  */
 
@@ -22,7 +22,7 @@ use Pan\QueryBuilder\Constraints\Ifc\TypeConstants;
  *
  * @package Pan\QueryBuilder\Constraints
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
- * @since   TODO ${VERSION}
+ * @since   1.0.0
  */
 class CustomField extends MetaConstraint implements CompareConstants, RelationConstants, TypeConstants {
     /**
@@ -92,7 +92,7 @@ class CustomField extends MetaConstraint implements CompareConstants, RelationCo
      *
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function exchangeArray( $data ) {
         $this->meta_query = array();
@@ -119,7 +119,7 @@ class CustomField extends MetaConstraint implements CompareConstants, RelationCo
      * @param $relation
      *
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setRelation( $relation ) {
         if ( ! $this->isValidRelation( $relation ) ) {
@@ -133,7 +133,7 @@ class CustomField extends MetaConstraint implements CompareConstants, RelationCo
      *
      * @return bool
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function isValidRelation( $relation ) {
         return in_array( $relation, static::$__relation__, true );
@@ -147,7 +147,7 @@ class CustomField extends MetaConstraint implements CompareConstants, RelationCo
      *
      * @return bool
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function add( $key, $value = '', $compare = '', $type = '' ) {
         $value = (array) $value;
@@ -182,7 +182,7 @@ class CustomField extends MetaConstraint implements CompareConstants, RelationCo
      *
      * @return bool
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     protected function validateAddValues( $key, $value, $compare, $type ) {
         $value = (array) $value;
@@ -215,7 +215,7 @@ class CustomField extends MetaConstraint implements CompareConstants, RelationCo
      *
      * @return bool
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function isValidCompare( $compare ) {
@@ -227,7 +227,7 @@ class CustomField extends MetaConstraint implements CompareConstants, RelationCo
      *
      * @return bool
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function isValidType( $type ) {
         return in_array( $type, static::$__type__, true );
@@ -237,7 +237,7 @@ class CustomField extends MetaConstraint implements CompareConstants, RelationCo
      * @return array
      * @throws \Exception
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function getArrayCopy() {
         $out = parent::getArrayCopy();

@@ -5,7 +5,7 @@
  * User: Panagiotis Vagenas <pan.vagenas@gmail.com>
  * Date: 9/11/2015
  * Time: 7:43 μμ
- * Since: TODO ${VERSION}
+ * Since: 1.0.0
  * Copyright: 2015 Panagiotis Vagenas
  */
 
@@ -18,7 +18,7 @@ use Pan\QueryBuilder\Constraints\Abs\Constraint;
  *
  * @package Pan\QueryBuilder\Constraints
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
- * @since   TODO ${VERSION}
+ * @since   1.0.0
  */
 class Pagination extends Constraint {
     /**
@@ -89,7 +89,7 @@ class Pagination extends Constraint {
     /**
      * @return boolean
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function isNopaging() {
@@ -101,7 +101,7 @@ class Pagination extends Constraint {
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setNopaging( $nopaging ) {
         $this->nopaging = (bool) $nopaging;
@@ -112,7 +112,7 @@ class Pagination extends Constraint {
     /**
      * @return int
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getPostsPerPage() {
@@ -124,7 +124,7 @@ class Pagination extends Constraint {
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setPostsPerPage( $posts_per_page ) {
         $this->posts_per_page = (int) $posts_per_page;
@@ -135,7 +135,7 @@ class Pagination extends Constraint {
     /**
      * @return int
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getPostsPerArchivePage() {
@@ -147,7 +147,7 @@ class Pagination extends Constraint {
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setPostsPerArchivePage( $posts_per_archive_page ) {
         $this->posts_per_archive_page = (int) $posts_per_archive_page;
@@ -158,7 +158,7 @@ class Pagination extends Constraint {
     /**
      * @return int
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getOffset() {
@@ -171,7 +171,7 @@ class Pagination extends Constraint {
      * @return $this
      * @see Pagination::$offset
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setOffset( $offset ) {
         $this->offset = (int) $offset;
@@ -182,7 +182,7 @@ class Pagination extends Constraint {
     /**
      * @return int
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getPaged() {
@@ -194,7 +194,7 @@ class Pagination extends Constraint {
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setPaged( $paged ) {
         $this->paged = (int) $paged;
@@ -205,7 +205,7 @@ class Pagination extends Constraint {
     /**
      * @return int
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getPage() {
@@ -217,7 +217,7 @@ class Pagination extends Constraint {
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setPage( $page ) {
         $this->page = (int) $page;
@@ -228,7 +228,7 @@ class Pagination extends Constraint {
     /**
      * @return boolean
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function isIgnoreStickyPosts() {
@@ -244,7 +244,7 @@ class Pagination extends Constraint {
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setIgnoreStickyPosts( $ignore_sticky_posts ) {
         $this->ignore_sticky_posts = (bool) $ignore_sticky_posts;

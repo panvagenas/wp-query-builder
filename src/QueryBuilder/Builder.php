@@ -5,7 +5,7 @@
  * User: Panagiotis Vagenas <pan.vagenas@gmail.com>
  * Date: 9/11/2015
  * Time: 7:46 μμ
- * Since: TODO ${VERSION}
+ * Since: 1.0.0
  * Copyright: 2015 Panagiotis Vagenas
  */
 
@@ -19,7 +19,7 @@ use Pan\QueryBuilder\Constraints\Abs\Constraint;
  *
  * @package Pan\QueryBuilder
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
- * @since   TODO ${VERSION}
+ * @since   1.0.0
  */
 class Builder {
     /**
@@ -36,7 +36,7 @@ class Builder {
      *
      * @return $this|Builder
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function addConstraint( Constraint $constraint ) {
         if ( $this->hasConstraint( $constraint->getName() ) ) {
@@ -52,7 +52,7 @@ class Builder {
      *
      * @return bool
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function hasConstraint( $constraint ) {
         $name = $constraint instanceof Constraint ? $constraint->getName() : (string) $constraint;
@@ -65,7 +65,7 @@ class Builder {
      *
      * @return $this|Builder
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function updateConstraint( Constraint $newConstraint ) {
         if ( $oldConstraint = $this->getConstraint( $newConstraint->getName() ) ) {
@@ -80,7 +80,7 @@ class Builder {
      *
      * @return Constraint|null
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function getConstraint( $constraint ) {
         $name = $constraint instanceof Constraint ? $constraint->getName() : (string) $constraint;
@@ -93,7 +93,7 @@ class Builder {
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function removeConstraint( $constraint ) {
         $name = $constraint instanceof Constraint ? $constraint->getName() : (string) $constraint;
@@ -105,7 +105,7 @@ class Builder {
     /**
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function getQueryArgsArray() {
         $args = array();
@@ -121,7 +121,7 @@ class Builder {
     /**
      * @return Query
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function crtAttachQuery() {
         if(!$this->query){
@@ -134,7 +134,7 @@ class Builder {
     /**
      * @return Query
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getQuery() {

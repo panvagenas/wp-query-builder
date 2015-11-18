@@ -5,7 +5,7 @@
  * User: Panagiotis Vagenas <pan.vagenas@gmail.com>
  * Date: 9/11/2015
  * Time: 12:41 πμ
- * Since: TODO ${VERSION}
+ * Since: 1.0.0
  * Copyright: 2015 Panagiotis Vagenas
  */
 
@@ -29,7 +29,7 @@ class Query {
     /**
      * @return \WP_Query
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function getResult() {
         $this->lastResult = new \WP_Query( $this->builder->getQueryArgsArray() );
@@ -42,7 +42,7 @@ class Query {
      *
      * @return \WP_Error|\WP_Query
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function sort( array $postIds ) {
         if ( ! $this->lastResult || !$this->lastResult->posts ) {
@@ -65,7 +65,7 @@ class Query {
     /**
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function getLastResultPostIds(){
         $ids = $this->pluckLastResult('ID');
@@ -81,7 +81,7 @@ class Query {
      *
      * @return array|\WP_Error
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function pluckLastResult($field){
         if(!$this->lastResult){
@@ -95,7 +95,7 @@ class Query {
     /**
      * @return \WP_Query
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getLastResult() {
@@ -105,7 +105,7 @@ class Query {
     /**
      * @return Builder
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getBuilder() {
@@ -117,7 +117,7 @@ class Query {
      *
      * @return $this
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setBuilder( Builder $builder ) {
         $this->builder = $builder;

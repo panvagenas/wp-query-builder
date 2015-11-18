@@ -5,7 +5,7 @@
  * User: Panagiotis Vagenas <pan.vagenas@gmail.com>
  * Date: 9/11/2015
  * Time: 12:52 πμ
- * Since: TODO ${VERSION}
+ * Since: 1.0.0
  * Copyright: 2015 Panagiotis Vagenas
  */
 
@@ -18,7 +18,7 @@ use Pan\QueryBuilder\Constraints\Abs\Constraint;
  *
  * @package Pan\QueryBuilder\Constraints
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
- * @since   TODO ${VERSION}
+ * @since   1.0.0
  */
 class Author extends Constraint {
     /**
@@ -52,7 +52,7 @@ class Author extends Constraint {
     /**
      * @return int
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getAuthor() {
@@ -63,7 +63,7 @@ class Author extends Constraint {
      * @param int $author Use author id
      *
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setAuthor( $author ) {
         $this->author = (int) $author;
@@ -72,7 +72,7 @@ class Author extends Constraint {
     /**
      * @return string
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getAuthorName() {
@@ -83,7 +83,7 @@ class Author extends Constraint {
      * @param string $author_name Use `user_nicename` - NOT name
      *
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setAuthorName( $author_name ) {
         $this->author_name = (string) $author_name;
@@ -92,7 +92,7 @@ class Author extends Constraint {
     /**
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getAuthorIn() {
@@ -103,7 +103,7 @@ class Author extends Constraint {
      * @param array $author__in Use author id (available since WP Version 3.7)
      *
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setAuthorIn( $author__in ) {
         $this->author__in = (array) $author__in;
@@ -112,7 +112,7 @@ class Author extends Constraint {
     /**
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      * @codeCoverageIgnore
      */
     public function getAuthorNotIn() {
@@ -123,7 +123,7 @@ class Author extends Constraint {
      * @param array $author__not_in Use author id (available since WP Version 3.7)
      *
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function setAuthorNotIn( $author__not_in ) {
         $this->author__not_in = (array) $author__not_in;

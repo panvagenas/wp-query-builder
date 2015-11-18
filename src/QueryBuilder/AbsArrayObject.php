@@ -5,7 +5,7 @@
  * User: Panagiotis Vagenas <pan.vagenas@gmail.com>
  * Date: 10/11/2015
  * Time: 12:21 πμ
- * Since: TODO ${VERSION}
+ * Since: 1.0.0
  * Copyright: 2015 Panagiotis Vagenas
  */
 
@@ -17,7 +17,7 @@ namespace Pan\QueryBuilder;
  *
  * @package Pan\QueryBuilder
  * @author  Panagiotis Vagenas <pan.vagenas@gmail.com>
- * @since   TODO ${VERSION}
+ * @since   1.0.0
  */
 abstract class AbsArrayObject extends \ArrayObject {
     /**
@@ -28,7 +28,7 @@ abstract class AbsArrayObject extends \ArrayObject {
      * @param string $iterator_class
      *
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function __construct( $input = array(), $flags = 3, $iterator_class = "ArrayIterator" ) {
         parent::__construct( $input, $flags, $iterator_class );
@@ -41,7 +41,7 @@ abstract class AbsArrayObject extends \ArrayObject {
      *
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function exchangeArray( $data ) {
         foreach ( $this->getArrayCopy() as $index => $item ) {
@@ -56,7 +56,7 @@ abstract class AbsArrayObject extends \ArrayObject {
     /**
      * @return array
      * @author Panagiotis Vagenas <pan.vagenas@gmail.com>
-     * @since  TODO ${VERSION}
+     * @since  1.0.0
      */
     public function getArrayCopy() {
         return get_object_vars( $this );
